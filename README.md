@@ -4,6 +4,21 @@ This is a list of OBD2 PIDs supported by a Hyundai Elantra CN7 MY2023 with the 1
 
 The vehicle has been built in the Ulsan factory in South Korea so I'm assuming the these should also work for the 1.6 MPI and 1.6 LPI engine variants sold over there.
 
+These have been tested using the following setup:
+<ul>
+<li>Hardware</li>
+        <ul>
+        <li><a href="https://www.scantool.net/obdlink-lxbt/">OBDLink LX</a>
+        <li><a href="https://www.scantool.net/obdlink-sx/">OBDLink SX</a>
+        </ul>
+<li>Software</li>
+        <ul>
+        <li><a href="https://play.google.com/store/apps/details?id=org.prowl.torque&hl=en&gl=US">Torque (Android)</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=OCTech.Mobile.Applications.OBDLink&hl=en&gl=US">OBDLink (Android)</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.ovz.carscanner&hl=en&gl=US">Car Scanner (Android)</a></li>
+        <li><a href="https://www.scantool.net/obdwiz/">OBDwiz (Windows)</a></li>
+        </ul>
+</ul>
 
 <b> Standard PIDs (Service 01) </b>
 
@@ -1294,8 +1309,253 @@ CD: Current</td>
             <td class="column32 style10 s">PIDs supported [$A1 - $C0]	</td>
           </tr>
         </tbody>
-    </table>
+</table>
      
-    <b> Custom PIDs </b>
-    
-    [CN7.csv](https://github.com/gdincu/HyundaiElantraCN7-OBD2-PIDs/files/11037246/CN7.csv)
+<b> Custom PIDs </b>
+
+The below are used with the Torque Pro app and therefore some of the formulas are based on the Torque Wiki https://wiki.torque-bhp.com/view/Equations
+
+<table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+        <colgroup><col class="col0">
+        <col class="col1">
+        <col class="col2">
+        <col class="col3">
+        <col class="col4">
+        <col class="col5">
+        <col class="col6">
+        <col class="col7">
+        </colgroup><tbody>
+          <tr class="row0">
+            <td class="column0 style0 s">Name</td>
+            <td class="column1 style0 s">ShortName</td>
+            <td class="column2 style0 s">ModeAndPID</td>
+            <td class="column3 style0 s">Equation</td>
+            <td class="column4 style0 s">Min Value</td>
+            <td class="column5 style0 s">Max Value</td>
+            <td class="column6 style0 s">Units</td>
+            <td class="column7 style0 s">Header</td>
+          </tr>
+          <tr class="row1">
+            <td class="column0 style0 s">006_Display Odometer</td>
+            <td class="column1 style0 s">Odometer2</td>
+            <td class="column2 style0 s">0x22b002</td>
+            <td class="column3 style0 s">(h&lt;8)+i</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">16777215</td>
+            <td class="column6 style0 s">Km</td>
+            <td class="column7 style0 s">7C6</td>
+          </tr>
+          <tr class="row2">
+            <td class="column0 style0 s">006_Tyre Pressure FL</td>
+            <td class="column1 style0 s">PressFL</td>
+            <td class="column2 style0 s">0x22c00b</td>
+            <td class="column3 style0 s">E/5</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">50</td>
+            <td class="column6 style0 s">psi</td>
+            <td class="column7 style0 s">7A0</td>
+          </tr>
+          <tr class="row3">
+            <td class="column0 style0 s">006_Tyre Pressure FR</td>
+            <td class="column1 style0 s">PressFR</td>
+            <td class="column2 style0 s">0x22c00b</td>
+            <td class="column3 style0 s">J/5</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">50</td>
+            <td class="column6 style0 s">psi</td>
+            <td class="column7 style0 s">7A0</td>
+          </tr>
+          <tr class="row4">
+            <td class="column0 style0 s">006_Tyre Pressure RL</td>
+            <td class="column1 style0 s">PressRL</td>
+            <td class="column2 style0 s">0x22c00b</td>
+            <td class="column3 style0 s">T/5</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">50</td>
+            <td class="column6 style0 s">psi</td>
+            <td class="column7 style0 s">7A0</td>
+          </tr>
+          <tr class="row5">
+            <td class="column0 style0 s">006_Tyre Pressure RR</td>
+            <td class="column1 style0 s">PressRR</td>
+            <td class="column2 style0 s">0x22c00b</td>
+            <td class="column3 style0 s">O/5</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">50</td>
+            <td class="column6 style0 s">psi</td>
+            <td class="column7 style0 s">7A0</td>
+          </tr>
+          <tr class="row6">
+            <td class="column0 style0 s">006_Tyre Temperature FL</td>
+            <td class="column1 style0 s">_TempFL</td>
+            <td class="column2 style0 s">0x22c00b</td>
+            <td class="column3 style0 s">F-50</td>
+            <td class="column4 style0 n">-50</td>
+            <td class="column5 style0 n">100</td>
+            <td class="column6 style0 s">C</td>
+            <td class="column7 style0 s">7A0</td>
+          </tr>
+          <tr class="row7">
+            <td class="column0 style0 s">006_Tyre Temperature FR</td>
+            <td class="column1 style0 s">_TempFR</td>
+            <td class="column2 style0 s">0x22c00b</td>
+            <td class="column3 style0 s">K-50</td>
+            <td class="column4 style0 n">-50</td>
+            <td class="column5 style0 n">100</td>
+            <td class="column6 style0 s">C</td>
+            <td class="column7 style0 s">7A0</td>
+          </tr>
+          <tr class="row8">
+            <td class="column0 style0 s">006_Tyre Temperature RL</td>
+            <td class="column1 style0 s">_TempRL</td>
+            <td class="column2 style0 s">0x22c00b</td>
+            <td class="column3 style0 s">U-50</td>
+            <td class="column4 style0 n">-50</td>
+            <td class="column5 style0 n">100</td>
+            <td class="column6 style0 s">C</td>
+            <td class="column7 style0 s">7A0</td>
+          </tr>
+          <tr class="row9">
+            <td class="column0 style0 s">006_Tyre Temperature RR</td>
+            <td class="column1 style0 s">_TempRR</td>
+            <td class="column2 style0 s">0x22c00b</td>
+            <td class="column3 style0 s">P-50</td>
+            <td class="column4 style0 n">-50</td>
+            <td class="column5 style0 n">100</td>
+            <td class="column6 style0 s">C</td>
+            <td class="column7 style0 s">7A0</td>
+          </tr>
+          <tr class="row10">
+            <td class="column0 style0 s">CoolantA</td>
+            <td class="column1 style0 s">CoolantA</td>
+            <td class="column2 style0 s">0x0167</td>
+            <td class="column3 style0 s">B-40</td>
+            <td class="column4 style0 n">-40</td>
+            <td class="column5 style0 n">215</td>
+            <td class="column6 style0 s">C</td>
+            <td class="column7">&nbsp;</td>
+          </tr>
+          <tr class="row11">
+            <td class="column0 style0 s">CoolantB</td>
+            <td class="column1 style0 s">CoolantB</td>
+            <td class="column2 style0 s">0x0167</td>
+            <td class="column3 style0 s">C-40</td>
+            <td class="column4 style0 n">-40</td>
+            <td class="column5 style0 n">215</td>
+            <td class="column6 style0 s">C</td>
+            <td class="column7">&nbsp;</td>
+          </tr>
+          <tr class="row12">
+            <td class="column0 style0 s">CurrentGear</td>
+            <td class="column1 style0 s">CurrentGear</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3 style0 s">LOOKUP([0C]/([0D]+0.1):0:0.1~26=6:27~34=5:35~44=4:45~59=3:60~91=2:91~1300=1)</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">6</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+          </tr>
+          <tr class="row13">
+            <td class="column0 style0 s">FuelLevel</td>
+            <td class="column1 style0 s">FuelLevel</td>
+            <td class="column2 style0 s">0x22b002</td>
+            <td class="column3 style0 s">avg(20:E/1.9361703271804)</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">47</td>
+            <td class="column6 style0 s">L</td>
+            <td class="column7 style0 s">7C6</td>
+          </tr>
+          <tr class="row14">
+            <td class="column0 style0 s">InstantConsumption</td>
+            <td class="column1 style0 s">InstantConsumption</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3 style0 s">LOOKUP(100/([ff1203]+0.01):0:0.1~50=100/[ff1203])</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">100</td>
+            <td class="column6 style0 s">L/100km</td>
+            <td class="column7">&nbsp;</td>
+          </tr>
+          <tr class="row15">
+            <td class="column0 style0 s">Odometer</td>
+            <td class="column1 style0 s">Odometer</td>
+            <td class="column2 style0 s">0x22b002</td>
+            <td class="column3 style0 s">Int24(G:H:I)</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">16777215</td>
+            <td class="column6 style0 s">km</td>
+            <td class="column7 style0 s">7C6</td>
+          </tr>
+          <tr class="row16">
+            <td class="column0 style0 s">OilTemp</td>
+            <td class="column1 style0 s">OilTemp</td>
+            <td class="column2 style0 s">0x22e001</td>
+            <td class="column3 style0 s">AI*0.75-48</td>
+            <td class="column4 style0 n">-500</td>
+            <td class="column5 style0 n">500</td>
+            <td class="column6 style0 s">C</td>
+            <td class="column7">&nbsp;</td>
+          </tr>
+          <tr class="row17">
+            <td class="column0 style0 s">OpenDuration_Inj_1</td>
+            <td class="column1 style0 s">OpenDuration_Inj_1</td>
+            <td class="column2 style0 s">0x22e002</td>
+            <td class="column3 style0 s">(X*256+W)*0.8192</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">65535</td>
+            <td class="column6 style0 s">mS</td>
+            <td class="column7">&nbsp;</td>
+          </tr>
+          <tr class="row18">
+            <td class="column0 style0 s">OpenDuration_Inj_2</td>
+            <td class="column1 style0 s">OpenDuration_Inj_2</td>
+            <td class="column2 style0 s">0x22e002</td>
+            <td class="column3 style0 s">(Z*256+Y)*0.8192</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">65535</td>
+            <td class="column6 style0 s">mS</td>
+            <td class="column7">&nbsp;</td>
+          </tr>
+          <tr class="row19">
+            <td class="column0 style0 s">OpenDuration_Inj_3</td>
+            <td class="column1 style0 s">OpenDuration_Inj_3</td>
+            <td class="column2 style0 s">0x22e002</td>
+            <td class="column3 style0 s">(AB*256+AA)*0.8192</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">65535</td>
+            <td class="column6 style0 s">mS</td>
+            <td class="column7">&nbsp;</td>
+          </tr>
+          <tr class="row20">
+            <td class="column0 style0 s">OpenDuration_Inj_4</td>
+            <td class="column1 style0 s">OpenDuration_Inj_4</td>
+            <td class="column2 style0 s">0x22e002</td>
+            <td class="column3 style0 s">(AD*256+AC)*0.8192</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">65535</td>
+            <td class="column6 style0 s">mS</td>
+            <td class="column7">&nbsp;</td>
+          </tr>
+          <tr class="row21">
+            <td class="column0 style0 s">Total Fuel Consumed (Lifetime)</td>
+            <td class="column1 style0 s">FuelConsumedTotal</td>
+            <td class="column2 style0 s">0x0917</td>
+            <td class="column3 style0 s">int32(N:O:P:Q)/100</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">42949672.95</td>
+            <td class="column6 style0 s">L</td>
+            <td class="column7">&nbsp;</td>
+          </tr>
+          <tr class="row22">
+            <td class="column0 style0 s">Total Fuel Consumed (Recent)</td>
+            <td class="column1 style0 s">FuelConsumedRecent</td>
+            <td class="column2 style0 s">0x0917</td>
+            <td class="column3 style0 s">int32(J:K:L:M)/100</td>
+            <td class="column4 style0 n">0</td>
+            <td class="column5 style0 n">42949672.95</td>
+            <td class="column6 style0 s">L</td>
+            <td class="column7">&nbsp;</td>
+          </tr>
+        </tbody>
+</table>
+
+[Download csv file](https://github.com/gdincu/HyundaiElantraCN7-OBD2-PIDs/files/11037246/CN7.csv)
