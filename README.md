@@ -1,4 +1,4 @@
-# HyundaiElantraCN7 OBD2 PIDs
+# Hyundai Elantra CN7 OBD2 PIDs
 
 This is a list of OBD2 PIDs supported by a Hyundai Elantra CN7 MY2023 with the 1.6 MPI Smartstream engine sold in Europe.
 
