@@ -1,0 +1,47 @@
+Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max Value"""," ""Units"""," ""Header"""," ""startDiagnostic"""," ""stopDiagnostic"""," ""scale""",minimumRefreshDelayMillis
+[BMS] Available Charge Power,Max REGEN,0x220101,((f<8)+g)/100,0,98,kW,7D4,,,1,60000
+[BMS] Available Discharge Power,Max POWER,0x220101,((h<8)+i)/100,0,98,kW,7D4,,,1,60000
+[BMS] Battery Min Temperature,Batt MinT,0x220101,Signed(P),-40,80,C,7D4,,,1,60000
+[BMS] Battery Module 01 Temperature,Batt Temp01,0x220101,Signed(Q),-40,80,C,7D4,,,1,60000
+[BMS] Battery Module 02 Temperature,Batt Temp02,0x220101,Signed(R),-40,80,C,7D4,,,1,60000
+[BMS] Battery Module 03 Temperature,Batt Temp03,0x220101,Signed(S),-40,80,C,7D4,,,1,60000
+[BMS] Battery Module 04 Temperature,Batt Temp04,0x220101,Signed(T),-40,80,C,7D4,,,1,60000
+[BMS] State of Charge,SOC BMS,0x220101,E/2,0,100,%,7D4,,,1,60000
+[Cluster] FuelLevel,FuelLevel,0x22b002,avg(20:E/1.9361703271804),0,47,L,7C6,,,1,60000
+[Cluster] Odometer,Odometer_2,0x22b002,(H<8)+I,0,16777215,Km,7C6,,,1,60000
+[Cluster] Odometer,Odometer_1,0x22b002,Int24(G:H:I),0,16777215,km,7C6,,,1,60000
+[Custom] Current Gear,Gear,,LOOKUP([0C]/([0D]+0.1):0:0.1~26=6:27~34=5:35~44=4:45~59=3:60~91=2:91~1300=1),0,6,,,,,1,500
+[Custom] FuelSysStatus,FuelSysStatus,0x0103,LOOKUP(A:'EngineOff':1='Warmup':2='OK':4='OK':8='NOK':16='NOK'),0,16,,,,,1,3000
+[Custom] Instant Fuel Consumption,InstantConsumption,,LOOKUP(100/([ff1203]+0.01):0:0.1~50=100/[ff1203]),0,100,L/100km,,,,1,0
+[DelayedRefresh] AmbientAirTemp,OutsideTemp,,[46],-40,215,C,,,,1,60000
+[DelayedRefresh] Catalyst Temp B1S1,Cat B1S1,,[3C],0,6513.5,C,,,,1,5000
+[DelayedRefresh] Control Module Voltage,Alternator,,[42],0,65.535,V,,,,1,5000
+[DelayedRefresh] CoolantA,CoolantA,0x0167,B-40,-40,215,C,,,,1,5000
+[DelayedRefresh] CoolantB,CoolantB,0x0167,C-40,-40,215,C,,,,1,5000
+[Injection] OpenDuration_Inj_1,Inj_1_Open,0x22e002,INT16(X:W)*0.8192,0,65535,mS,,,,1,0
+[Injection] OpenDuration_Inj_2,Inj_2_Open,0x22e002,INT16(Z:Y)*0.8192,0,65535,mS,,,,1,0
+[Injection] OpenDuration_Inj_3,Inj_3_Open,0x22e002,INT16(AB:AA)*0.8192,0,65535,mS,,,,1,0
+[Injection] OpenDuration_Inj_4,Inj_4_Open,0x22e002,INT16(AD:AC)*0.8192,0,65535,mS,,,,1,0
+[OBFCM] Total Fuel Consumed (Lifetime),FuelConsumedTotal,0x0917,int32(N:O:P:Q)/100,0,42949672.95,L,,,,1,60000
+[OBFCM] Total Fuel Consumed (Recent),FuelConsumedRecent,0x0917,int32(J:K:L:M)/100,0,42949672.95,L,,,,1,60000
+[TPMS] Alert FL,AltertFL,0x22c00b,M,0,100,,7A0,,,1,60000
+[TPMS] Alert FR,AltertFR,0x22c00b,H,0,100,,7A0,,,1,60000
+[TPMS] Alert RL,AltertRL,0x22c00b,R,0,100,,7A0,,,1,60000
+[TPMS] Alert RR,AltertRR,0x22c00b,W,0,100,,7A0,,,1,60000
+[TPMS] Battery FL,BattFL,0x22c00b,LOOKUP(L::0='>3 V':1='2.7 - 3 V':2='2.4 - 2.7 V':3='< 2.4 V'),0,100,%,7A0,,,1,60000
+[TPMS] Battery FR,BattFR,0x22c00b,LOOKUP(G::0='>3 V':1='2.7 - 3 V':2='2.4 - 2.7 V':3='< 2.4 V'),0,100,%,7A0,,,1,60000
+[TPMS] Battery RL,BattRL,0x22c00b,LOOKUP(Q::0='>3 V':1='2.7 - 3 V':2='2.4 - 2.7 V':3='< 2.4 V'),0,100,%,7A0,,,1,60000
+[TPMS] Battery RR,BattRR,0x22c00b,LOOKUP(V::0='>3 V':1='2.7 - 3 V':2='2.4 - 2.7 V':3='< 2.4 V'),0,100,%,7A0,,,1,60000
+[TPMS] ID FL,TPMS ID FL,0x22c002,int32(J:K:L:M),0,,,7A0,,,1,60000
+[TPMS] ID FR,TPMS ID FR,0x22c002,int32(E:F:G:H),0,,,7A0,,,1,60000
+[TPMS] ID RL,TPMS ID RL,0x22c002,int32(O:P:Q:R),0,,,7A0,,,1,60000
+[TPMS] ID RR,TPMS ID RR,0x22c002,int32(T:U:V:W),0,,,7A0,,,1,60000
+[TPMS] Tyre Pressure FL,PressFL,0x22c00b,J/5,0,50,psi,7A0,,,1,60000
+[TPMS] Tyre Pressure FR,PressFR,0x22c00b,E/5,0,50,psi,7A0,,,1,60000
+[TPMS] Tyre Pressure RL,PressRL,0x22c00b,O/5,0,50,psi,7A0,,,1,60000
+[TPMS] Tyre Pressure RR,PressRR,0x22c00b,T/5,0,50,psi,7A0,,,1,60000
+[TPMS] Tyre Temperature FL,TempFL,0x22c00b,K-50,-50,100,C,7A0,,,1,60000
+[TPMS] Tyre Temperature FR,TempFR,0x22c00b,F-50,-50,100,C,7A0,,,1,60000
+[TPMS] Tyre Temperature RL,TempRL,0x22c00b,P-50,-50,100,C,7A0,,,1,60000
+[TPMS] Tyre Temperature RR,TempRR,0x22c00b,U-50,-50,100,C,7A0,,,1,60000
+[EMS] Oil Temperature,OilTemp,0x22e001,AI*0.75-48,-500,500,C,,,,1,5000
