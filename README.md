@@ -1315,247 +1315,669 @@ CD: Current</td>
 
 The below are used with the Torque Pro app and therefore some of the formulas are based on the Torque Wiki https://wiki.torque-bhp.com/view/Equations
 
-<table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
-        <colgroup><col class="col0">
-        <col class="col1">
-        <col class="col2">
-        <col class="col3">
-        <col class="col4">
-        <col class="col5">
-        <col class="col6">
-        <col class="col7">
-        </colgroup><tbody>
-          <tr class="row0">
-            <td class="column0 style0 s">Name</td>
-            <td class="column1 style0 s">ShortName</td>
-            <td class="column2 style0 s">ModeAndPID</td>
-            <td class="column3 style0 s">Equation</td>
-            <td class="column4 style0 s">Min Value</td>
-            <td class="column5 style0 s">Max Value</td>
-            <td class="column6 style0 s">Units</td>
-            <td class="column7 style0 s">Header</td>
+<table class="js-csv-data csv-data">
+      <thead>
+        <tr>
+            <th> "Name"</th>
+            <th> "ShortName"</th>
+            <th> "ModeAndPID"</th>
+            <th> "Equation"</th>
+            <th> "Min Value"</th>
+            <th> "Max Value"</th>
+            <th> "Units"</th>
+            <th> "Header"</th>
+            <th> "startDiagnostic"</th>
+            <th> "stopDiagnostic"</th>
+            <th> "scale"</th>
+            <th>minimumRefreshDelayMillis</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>[BMS] Available Charge Power</td>
+              <td>Max REGEN</td>
+              <td>0x220101</td>
+              <td>((f&lt;8)+g)/100</td>
+              <td>0</td>
+              <td>98</td>
+              <td>kW</td>
+              <td>7D4</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
           </tr>
-          <tr class="row1">
-            <td class="column0 style0 s">006_Display Odometer</td>
-            <td class="column1 style0 s">Odometer2</td>
-            <td class="column2 style0 s">0x22b002</td>
-            <td class="column3 style0 s">(h&lt;8)+i</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">16777215</td>
-            <td class="column6 style0 s">Km</td>
-            <td class="column7 style0 s">7C6</td>
+          <tr>
+              <td>[BMS] Available Discharge Power</td>
+              <td>Max POWER</td>
+              <td>0x220101</td>
+              <td>((h&lt;8)+i)/100</td>
+              <td>0</td>
+              <td>98</td>
+              <td>kW</td>
+              <td>7D4</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
           </tr>
-          <tr class="row2">
-            <td class="column0 style0 s">006_Tyre Pressure FL</td>
-            <td class="column1 style0 s">PressFL</td>
-            <td class="column2 style0 s">0x22c00b</td>
-            <td class="column3 style0 s">E/5</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">50</td>
-            <td class="column6 style0 s">psi</td>
-            <td class="column7 style0 s">7A0</td>
+          <tr>
+              <td>[BMS] Battery Min Temperature</td>
+              <td>Batt MinT</td>
+              <td>0x220101</td>
+              <td>Signed(P)</td>
+              <td>-40</td>
+              <td>80</td>
+              <td>C</td>
+              <td>7D4</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
           </tr>
-          <tr class="row3">
-            <td class="column0 style0 s">006_Tyre Pressure FR</td>
-            <td class="column1 style0 s">PressFR</td>
-            <td class="column2 style0 s">0x22c00b</td>
-            <td class="column3 style0 s">J/5</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">50</td>
-            <td class="column6 style0 s">psi</td>
-            <td class="column7 style0 s">7A0</td>
+          <tr>
+              <td>[BMS] Battery Module 01 Temperature</td>
+              <td>Batt Temp01</td>
+              <td>0x220101</td>
+              <td>Signed(Q)</td>
+              <td>-40</td>
+              <td>80</td>
+              <td>C</td>
+              <td>7D4</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
           </tr>
-          <tr class="row4">
-            <td class="column0 style0 s">006_Tyre Pressure RL</td>
-            <td class="column1 style0 s">PressRL</td>
-            <td class="column2 style0 s">0x22c00b</td>
-            <td class="column3 style0 s">T/5</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">50</td>
-            <td class="column6 style0 s">psi</td>
-            <td class="column7 style0 s">7A0</td>
+          <tr>
+              <td>[BMS] Battery Module 02 Temperature</td>
+              <td>Batt Temp02</td>
+              <td>0x220101</td>
+              <td>Signed(R)</td>
+              <td>-40</td>
+              <td>80</td>
+              <td>C</td>
+              <td>7D4</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
           </tr>
-          <tr class="row5">
-            <td class="column0 style0 s">006_Tyre Pressure RR</td>
-            <td class="column1 style0 s">PressRR</td>
-            <td class="column2 style0 s">0x22c00b</td>
-            <td class="column3 style0 s">O/5</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">50</td>
-            <td class="column6 style0 s">psi</td>
-            <td class="column7 style0 s">7A0</td>
+          <tr>
+              <td>[BMS] Battery Module 03 Temperature</td>
+              <td>Batt Temp03</td>
+              <td>0x220101</td>
+              <td>Signed(S)</td>
+              <td>-40</td>
+              <td>80</td>
+              <td>C</td>
+              <td>7D4</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
           </tr>
-          <tr class="row6">
-            <td class="column0 style0 s">006_Tyre Temperature FL</td>
-            <td class="column1 style0 s">_TempFL</td>
-            <td class="column2 style0 s">0x22c00b</td>
-            <td class="column3 style0 s">F-50</td>
-            <td class="column4 style0 n">-50</td>
-            <td class="column5 style0 n">100</td>
-            <td class="column6 style0 s">C</td>
-            <td class="column7 style0 s">7A0</td>
+          <tr>
+              <td>[BMS] Battery Module 04 Temperature</td>
+              <td>Batt Temp04</td>
+              <td>0x220101</td>
+              <td>Signed(T)</td>
+              <td>-40</td>
+              <td>80</td>
+              <td>C</td>
+              <td>7D4</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
           </tr>
-          <tr class="row7">
-            <td class="column0 style0 s">006_Tyre Temperature FR</td>
-            <td class="column1 style0 s">_TempFR</td>
-            <td class="column2 style0 s">0x22c00b</td>
-            <td class="column3 style0 s">K-50</td>
-            <td class="column4 style0 n">-50</td>
-            <td class="column5 style0 n">100</td>
-            <td class="column6 style0 s">C</td>
-            <td class="column7 style0 s">7A0</td>
+          <tr>
+              <td>[BMS] State of Charge</td>
+              <td>SOC BMS</td>
+              <td>0x220101</td>
+              <td>E/2</td>
+              <td>0</td>
+              <td>100</td>
+              <td>%</td>
+              <td>7D4</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
           </tr>
-          <tr class="row8">
-            <td class="column0 style0 s">006_Tyre Temperature RL</td>
-            <td class="column1 style0 s">_TempRL</td>
-            <td class="column2 style0 s">0x22c00b</td>
-            <td class="column3 style0 s">U-50</td>
-            <td class="column4 style0 n">-50</td>
-            <td class="column5 style0 n">100</td>
-            <td class="column6 style0 s">C</td>
-            <td class="column7 style0 s">7A0</td>
+          <tr>
+              <td>[Cluster] FuelLevel</td>
+              <td>FuelLevel</td>
+              <td>0x22b002</td>
+              <td>avg(20:E/1.9361703271804)</td>
+              <td>0</td>
+              <td>47</td>
+              <td>L</td>
+              <td>7C6</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
           </tr>
-          <tr class="row9">
-            <td class="column0 style0 s">006_Tyre Temperature RR</td>
-            <td class="column1 style0 s">_TempRR</td>
-            <td class="column2 style0 s">0x22c00b</td>
-            <td class="column3 style0 s">P-50</td>
-            <td class="column4 style0 n">-50</td>
-            <td class="column5 style0 n">100</td>
-            <td class="column6 style0 s">C</td>
-            <td class="column7 style0 s">7A0</td>
+          <tr>
+              <td>[Cluster] Odometer</td>
+              <td>Odometer_2</td>
+              <td>0x22b002</td>
+              <td>(H&lt;8)+I</td>
+              <td>0</td>
+              <td>16777215</td>
+              <td>Km</td>
+              <td>7C6</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
           </tr>
-          <tr class="row10">
-            <td class="column0 style0 s">CoolantA</td>
-            <td class="column1 style0 s">CoolantA</td>
-            <td class="column2 style0 s">0x0167</td>
-            <td class="column3 style0 s">B-40</td>
-            <td class="column4 style0 n">-40</td>
-            <td class="column5 style0 n">215</td>
-            <td class="column6 style0 s">C</td>
-            <td class="column7">&nbsp;</td>
+          <tr>
+              <td>[Cluster] Odometer</td>
+              <td>Odometer_1</td>
+              <td>0x22b002</td>
+              <td>Int24(G:H:I)</td>
+              <td>0</td>
+              <td>16777215</td>
+              <td>km</td>
+              <td>7C6</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
           </tr>
-          <tr class="row11">
-            <td class="column0 style0 s">CoolantB</td>
-            <td class="column1 style0 s">CoolantB</td>
-            <td class="column2 style0 s">0x0167</td>
-            <td class="column3 style0 s">C-40</td>
-            <td class="column4 style0 n">-40</td>
-            <td class="column5 style0 n">215</td>
-            <td class="column6 style0 s">C</td>
-            <td class="column7">&nbsp;</td>
+          <tr>
+              <td>[Custom] Current Gear</td>
+              <td>Gear</td>
+              <td></td>
+              <td>LOOKUP([0C]/([0D]+0.1):0:0.1~26=6:27~34=5:35~44=4:45~59=3:60~91=2:91~1300=1)</td>
+              <td>0</td>
+              <td>6</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>500</td>
           </tr>
-          <tr class="row12">
-            <td class="column0 style0 s">CurrentGear</td>
-            <td class="column1 style0 s">CurrentGear</td>
-            <td class="column2">&nbsp;</td>
-            <td class="column3 style0 s">LOOKUP([0C]/([0D]+0.1):0:0.1~26=6:27~34=5:35~44=4:45~59=3:60~91=2:91~1300=1)</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">6</td>
-            <td class="column6">&nbsp;</td>
-            <td class="column7">&nbsp;</td>
+          <tr>
+              <td>[Custom] FuelSysStatus</td>
+              <td>FuelSysStatus</td>
+              <td>0x0103</td>
+              <td>LOOKUP(A:'EngineOff':1='Warmup':2='OK':4='OK':8='NOK':16='NOK')</td>
+              <td>0</td>
+              <td>16</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>3000</td>
           </tr>
-          <tr class="row13">
-            <td class="column0 style0 s">FuelLevel</td>
-            <td class="column1 style0 s">FuelLevel</td>
-            <td class="column2 style0 s">0x22b002</td>
-            <td class="column3 style0 s">avg(20:E/1.9361703271804)</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">47</td>
-            <td class="column6 style0 s">L</td>
-            <td class="column7 style0 s">7C6</td>
+          <tr>
+              <td>[Custom] Instant Fuel Consumption</td>
+              <td>InstantConsumption</td>
+              <td></td>
+              <td>LOOKUP(100/([ff1203]+0.01):0:0.1~50=100/[ff1203])</td>
+              <td>0</td>
+              <td>100</td>
+              <td>L/100km</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>0</td>
           </tr>
-          <tr class="row14">
-            <td class="column0 style0 s">InstantConsumption</td>
-            <td class="column1 style0 s">InstantConsumption</td>
-            <td class="column2">&nbsp;</td>
-            <td class="column3 style0 s">LOOKUP(100/([ff1203]+0.01):0:0.1~50=100/[ff1203])</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">100</td>
-            <td class="column6 style0 s">L/100km</td>
-            <td class="column7">&nbsp;</td>
+          <tr>
+              <td>[DelayedRefresh] AmbientAirTemp</td>
+              <td>OutsideTemp</td>
+              <td></td>
+              <td>[46]</td>
+              <td>-40</td>
+              <td>215</td>
+              <td>C</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
           </tr>
-          <tr class="row15">
-            <td class="column0 style0 s">Odometer</td>
-            <td class="column1 style0 s">Odometer</td>
-            <td class="column2 style0 s">0x22b002</td>
-            <td class="column3 style0 s">Int24(G:H:I)</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">16777215</td>
-            <td class="column6 style0 s">km</td>
-            <td class="column7 style0 s">7C6</td>
+          <tr>
+              <td>[DelayedRefresh] Catalyst Temp B1S1</td>
+              <td>Cat B1S1</td>
+              <td></td>
+              <td>[3C]</td>
+              <td>0</td>
+              <td>6513.5</td>
+              <td>C</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>5000</td>
           </tr>
-          <tr class="row16">
-            <td class="column0 style0 s">OilTemp</td>
-            <td class="column1 style0 s">OilTemp</td>
-            <td class="column2 style0 s">0x22e001</td>
-            <td class="column3 style0 s">AI*0.75-48</td>
-            <td class="column4 style0 n">-500</td>
-            <td class="column5 style0 n">500</td>
-            <td class="column6 style0 s">C</td>
-            <td class="column7">&nbsp;</td>
+          <tr>
+              <td>[DelayedRefresh] Control Module Voltage</td>
+              <td>Alternator</td>
+              <td></td>
+              <td>[42]</td>
+              <td>0</td>
+              <td>65.535</td>
+              <td>V</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>5000</td>
           </tr>
-          <tr class="row17">
-            <td class="column0 style0 s">OpenDuration_Inj_1</td>
-            <td class="column1 style0 s">OpenDuration_Inj_1</td>
-            <td class="column2 style0 s">0x22e002</td>
-            <td class="column3 style0 s">(X*256+W)*0.8192</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">65535</td>
-            <td class="column6 style0 s">mS</td>
-            <td class="column7">&nbsp;</td>
+          <tr>
+              <td>[DelayedRefresh] CoolantA</td>
+              <td>CoolantA</td>
+              <td>0x0167</td>
+              <td>B-40</td>
+              <td>-40</td>
+              <td>215</td>
+              <td>C</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>5000</td>
           </tr>
-          <tr class="row18">
-            <td class="column0 style0 s">OpenDuration_Inj_2</td>
-            <td class="column1 style0 s">OpenDuration_Inj_2</td>
-            <td class="column2 style0 s">0x22e002</td>
-            <td class="column3 style0 s">(Z*256+Y)*0.8192</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">65535</td>
-            <td class="column6 style0 s">mS</td>
-            <td class="column7">&nbsp;</td>
+          <tr>
+              <td>[DelayedRefresh] CoolantB</td>
+              <td>CoolantB</td>
+              <td>0x0167</td>
+              <td>C-40</td>
+              <td>-40</td>
+              <td>215</td>
+              <td>C</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>5000</td>
           </tr>
-          <tr class="row19">
-            <td class="column0 style0 s">OpenDuration_Inj_3</td>
-            <td class="column1 style0 s">OpenDuration_Inj_3</td>
-            <td class="column2 style0 s">0x22e002</td>
-            <td class="column3 style0 s">(AB*256+AA)*0.8192</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">65535</td>
-            <td class="column6 style0 s">mS</td>
-            <td class="column7">&nbsp;</td>
+          <tr>
+              <td>[Injection] OpenDuration_Inj_1</td>
+              <td>Inj_1_Open</td>
+              <td>0x22e002</td>
+              <td>INT16(X:W)*0.8192</td>
+              <td>0</td>
+              <td>65535</td>
+              <td>mS</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>0</td>
           </tr>
-          <tr class="row20">
-            <td class="column0 style0 s">OpenDuration_Inj_4</td>
-            <td class="column1 style0 s">OpenDuration_Inj_4</td>
-            <td class="column2 style0 s">0x22e002</td>
-            <td class="column3 style0 s">(AD*256+AC)*0.8192</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">65535</td>
-            <td class="column6 style0 s">mS</td>
-            <td class="column7">&nbsp;</td>
+          <tr>
+              <td>[Injection] OpenDuration_Inj_2</td>
+              <td>Inj_2_Open</td>
+              <td>0x22e002</td>
+              <td>INT16(Z:Y)*0.8192</td>
+              <td>0</td>
+              <td>65535</td>
+              <td>mS</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>0</td>
           </tr>
-          <tr class="row21">
-            <td class="column0 style0 s">Total Fuel Consumed (Lifetime)</td>
-            <td class="column1 style0 s">FuelConsumedTotal</td>
-            <td class="column2 style0 s">0x0917</td>
-            <td class="column3 style0 s">int32(N:O:P:Q)/100</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">42949672.95</td>
-            <td class="column6 style0 s">L</td>
-            <td class="column7">&nbsp;</td>
+          <tr>
+              <td>[Injection] OpenDuration_Inj_3</td>
+              <td>Inj_3_Open</td>
+              <td>0x22e002</td>
+              <td>INT16(AB:AA)*0.8192</td>
+              <td>0</td>
+              <td>65535</td>
+              <td>mS</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>0</td>
           </tr>
-          <tr class="row22">
-            <td class="column0 style0 s">Total Fuel Consumed (Recent)</td>
-            <td class="column1 style0 s">FuelConsumedRecent</td>
-            <td class="column2 style0 s">0x0917</td>
-            <td class="column3 style0 s">int32(J:K:L:M)/100</td>
-            <td class="column4 style0 n">0</td>
-            <td class="column5 style0 n">42949672.95</td>
-            <td class="column6 style0 s">L</td>
-            <td class="column7">&nbsp;</td>
+          <tr>
+              <td>[Injection] OpenDuration_Inj_4</td>
+              <td>Inj_4_Open</td>
+              <td>0x22e002</td>
+              <td>INT16(AD:AC)*0.8192</td>
+              <td>0</td>
+              <td>65535</td>
+              <td>mS</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>0</td>
           </tr>
-        </tbody>
-</table>
+          <tr>
+              <td>[OBFCM] Total Fuel Consumed (Lifetime)</td>
+              <td>FuelConsumedTotal</td>
+              <td>0x0917</td>
+              <td>int32(N:O:P:Q)/100</td>
+              <td>0</td>
+              <td>42949672.95</td>
+              <td>L</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[OBFCM] Total Fuel Consumed (Recent)</td>
+              <td>FuelConsumedRecent</td>
+              <td>0x0917</td>
+              <td>int32(J:K:L:M)/100</td>
+              <td>0</td>
+              <td>42949672.95</td>
+              <td>L</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Alert FL</td>
+              <td>AltertFL</td>
+              <td>0x22c00b</td>
+              <td>M</td>
+              <td>0</td>
+              <td>100</td>
+              <td></td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Alert FR</td>
+              <td>AltertFR</td>
+              <td>0x22c00b</td>
+              <td>H</td>
+              <td>0</td>
+              <td>100</td>
+              <td></td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Alert RL</td>
+              <td>AltertRL</td>
+              <td>0x22c00b</td>
+              <td>R</td>
+              <td>0</td>
+              <td>100</td>
+              <td></td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Alert RR</td>
+              <td>AltertRR</td>
+              <td>0x22c00b</td>
+              <td>W</td>
+              <td>0</td>
+              <td>100</td>
+              <td></td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Battery FL</td>
+              <td>BattFL</td>
+              <td>0x22c00b</td>
+              <td>LOOKUP(L::0='&gt;3 V':1='2.7 - 3 V':2='2.4 - 2.7 V':3='&lt; 2.4 V')</td>
+              <td>0</td>
+              <td>100</td>
+              <td>%</td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Battery FR</td>
+              <td>BattFR</td>
+              <td>0x22c00b</td>
+              <td>LOOKUP(G::0='&gt;3 V':1='2.7 - 3 V':2='2.4 - 2.7 V':3='&lt; 2.4 V')</td>
+              <td>0</td>
+              <td>100</td>
+              <td>%</td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Battery RL</td>
+              <td>BattRL</td>
+              <td>0x22c00b</td>
+              <td>LOOKUP(Q::0='&gt;3 V':1='2.7 - 3 V':2='2.4 - 2.7 V':3='&lt; 2.4 V')</td>
+              <td>0</td>
+              <td>100</td>
+              <td>%</td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Battery RR</td>
+              <td>BattRR</td>
+              <td>0x22c00b</td>
+              <td>LOOKUP(V::0='&gt;3 V':1='2.7 - 3 V':2='2.4 - 2.7 V':3='&lt; 2.4 V')</td>
+              <td>0</td>
+              <td>100</td>
+              <td>%</td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] ID FL</td>
+              <td>TPMS ID FL</td>
+              <td>0x22c002</td>
+              <td>int32(J:K:L:M)</td>
+              <td>0</td>
+              <td></td>
+              <td></td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] ID FR</td>
+              <td>TPMS ID FR</td>
+              <td>0x22c002</td>
+              <td>int32(E:F:G:H)</td>
+              <td>0</td>
+              <td></td>
+              <td></td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] ID RL</td>
+              <td>TPMS ID RL</td>
+              <td>0x22c002</td>
+              <td>int32(O:P:Q:R)</td>
+              <td>0</td>
+              <td></td>
+              <td></td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] ID RR</td>
+              <td>TPMS ID RR</td>
+              <td>0x22c002</td>
+              <td>int32(T:U:V:W)</td>
+              <td>0</td>
+              <td></td>
+              <td></td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Tyre Pressure FL</td>
+              <td>PressFL</td>
+              <td>0x22c00b</td>
+              <td>J/5</td>
+              <td>0</td>
+              <td>50</td>
+              <td>psi</td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Tyre Pressure FR</td>
+              <td>PressFR</td>
+              <td>0x22c00b</td>
+              <td>E/5</td>
+              <td>0</td>
+              <td>50</td>
+              <td>psi</td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Tyre Pressure RL</td>
+              <td>PressRL</td>
+              <td>0x22c00b</td>
+              <td>O/5</td>
+              <td>0</td>
+              <td>50</td>
+              <td>psi</td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Tyre Pressure RR</td>
+              <td>PressRR</td>
+              <td>0x22c00b</td>
+              <td>T/5</td>
+              <td>0</td>
+              <td>50</td>
+              <td>psi</td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Tyre Temperature FL</td>
+              <td>TempFL</td>
+              <td>0x22c00b</td>
+              <td>K-50</td>
+              <td>-50</td>
+              <td>100</td>
+              <td>C</td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Tyre Temperature FR</td>
+              <td>TempFR</td>
+              <td>0x22c00b</td>
+              <td>F-50</td>
+              <td>-50</td>
+              <td>100</td>
+              <td>C</td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Tyre Temperature RL</td>
+              <td>TempRL</td>
+              <td>0x22c00b</td>
+              <td>P-50</td>
+              <td>-50</td>
+              <td>100</td>
+              <td>C</td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[TPMS] Tyre Temperature RR</td>
+              <td>TempRR</td>
+              <td>0x22c00b</td>
+              <td>U-50</td>
+              <td>-50</td>
+              <td>100</td>
+              <td>C</td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr>
+              <td>[EMS] Oil Temperature</td>
+              <td>OilTemp</td>
+              <td>0x22e001</td>
+              <td>AI*0.75-48</td>
+              <td>-500</td>
+              <td>500</td>
+              <td>C</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>5000</td>
+          </tr>
+      </tbody>
+    </table>
 
-[Download csv file](https://github.com/gdincu/HyundaiElantraCN7-OBD2-PIDs/files/11037246/CN7.csv)
+[Download csv file](https://raw.githubusercontent.com/gdincu/HyundaiElantraCN7-OBD2-PIDs/main/CN7.csv)
