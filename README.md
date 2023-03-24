@@ -1685,7 +1685,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Alert FL</td>
-              <td>AltertFL</td>
+              <td>Alert FL</td>
               <td>0x22c00b</td>
               <td>M</td>
               <td>0</td>
@@ -1699,7 +1699,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Alert FR</td>
-              <td>AltertFR</td>
+              <td>Alert FR</td>
               <td>0x22c00b</td>
               <td>H</td>
               <td>0</td>
@@ -1713,7 +1713,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Alert RL</td>
-              <td>AltertRL</td>
+              <td>Alert RL</td>
               <td>0x22c00b</td>
               <td>R</td>
               <td>0</td>
@@ -1727,7 +1727,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Alert RR</td>
-              <td>AltertRR</td>
+              <td>Alert RR</td>
               <td>0x22c00b</td>
               <td>W</td>
               <td>0</td>
@@ -1741,7 +1741,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Battery FL</td>
-              <td>BattFL</td>
+              <td>Batt FL</td>
               <td>0x22c00b</td>
               <td>LOOKUP(L::0='&gt;3 V':1='2.7 - 3 V':2='2.4 - 2.7 V':3='&lt; 2.4 V')</td>
               <td>0</td>
@@ -1755,7 +1755,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Battery FR</td>
-              <td>BattFR</td>
+              <td>Batt FR</td>
               <td>0x22c00b</td>
               <td>LOOKUP(G::0='&gt;3 V':1='2.7 - 3 V':2='2.4 - 2.7 V':3='&lt; 2.4 V')</td>
               <td>0</td>
@@ -1769,7 +1769,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Battery RL</td>
-              <td>BattRL</td>
+              <td>Batt RL</td>
               <td>0x22c00b</td>
               <td>LOOKUP(Q::0='&gt;3 V':1='2.7 - 3 V':2='2.4 - 2.7 V':3='&lt; 2.4 V')</td>
               <td>0</td>
@@ -1783,7 +1783,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Battery RR</td>
-              <td>BattRR</td>
+              <td>Batt RR</td>
               <td>0x22c00b</td>
               <td>LOOKUP(V::0='&gt;3 V':1='2.7 - 3 V':2='2.4 - 2.7 V':3='&lt; 2.4 V')</td>
               <td>0</td>
@@ -1853,7 +1853,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Tyre Pressure FL</td>
-              <td>PressFL</td>
+              <td>Press FL</td>
               <td>0x22c00b</td>
               <td>J/5</td>
               <td>0</td>
@@ -1867,7 +1867,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Tyre Pressure FR</td>
-              <td>PressFR</td>
+              <td>Press FR</td>
               <td>0x22c00b</td>
               <td>E/5</td>
               <td>0</td>
@@ -1881,7 +1881,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Tyre Pressure RL</td>
-              <td>PressRL</td>
+              <td>Press RL</td>
               <td>0x22c00b</td>
               <td>O/5</td>
               <td>0</td>
@@ -1895,7 +1895,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Tyre Pressure RR</td>
-              <td>PressRR</td>
+              <td>Press RR</td>
               <td>0x22c00b</td>
               <td>T/5</td>
               <td>0</td>
@@ -1909,7 +1909,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Tyre Temperature FL</td>
-              <td>TempFL</td>
+              <td>Temp FL</td>
               <td>0x22c00b</td>
               <td>K-50</td>
               <td>-50</td>
@@ -1923,7 +1923,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Tyre Temperature FR</td>
-              <td>TempFR</td>
+              <td>Temp FR</td>
               <td>0x22c00b</td>
               <td>F-50</td>
               <td>-50</td>
@@ -1937,7 +1937,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Tyre Temperature RL</td>
-              <td>TempRL</td>
+              <td>Temp RL</td>
               <td>0x22c00b</td>
               <td>P-50</td>
               <td>-50</td>
@@ -1951,7 +1951,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
           </tr>
           <tr>
               <td>[TPMS] Tyre Temperature RR</td>
-              <td>TempRR</td>
+              <td>Temp RR</td>
               <td>0x22c00b</td>
               <td>U-50</td>
               <td>-50</td>
