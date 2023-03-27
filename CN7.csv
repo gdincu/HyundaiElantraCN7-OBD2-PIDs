@@ -12,7 +12,7 @@ Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max
 [Cluster] Odometer,Odometer_1,0x22b002,Int24(G:H:I),0,16777215,km,7C6,,,1,60000
 [Custom] Current Gear,Gear,,LOOKUP([0C]/([0D]+0.1):0:0.1~26=6:27~34=5:35~44=4:45~59=3:60~91=2:91~1300=1),0,6,,,,,1,500
 [Custom] FuelSysStatus,FuelSysStatus,0x0103,LOOKUP(A:'EngineOff':1='Warmup':2='OK':4='OK':8='NOK':16='NOK'),0,16,,,,,1,3000
-[Custom] Instant Fuel Consumption,InstantConsumption,,LOOKUP(100/([ff1203]+0.01):0:0.1~50=100/[ff1203]),0,100,L/100km,,,,1,0
+[Custom] Instant Fuel Consumption,InstantConsumption,,LOOKUP([0D]:100/[ff1203]:0~5=[5E]),0,100,L/100km,,,,1,0
 [DelayedRefresh] AmbientAirTemp,OutsideTemp,,[46],-40,215,C,,,,1,60000
 [DelayedRefresh] Catalyst Temp B1S1,Cat B1S1,,[3C],0,6513.5,C,,,,1,5000
 [DelayedRefresh] Control Module Voltage,Alternator,,[42],0,65.535,V,,,,1,5000
