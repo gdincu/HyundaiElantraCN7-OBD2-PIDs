@@ -1,4 +1,6 @@
 Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max Value"""," ""Units"""," ""Header"""," ""startDiagnostic"""," ""stopDiagnostic"""," ""scale""",minimumRefreshDelayMillis
+[BMS] Auxillary Battery Life,Batt Life,0x22E004,AE,0,100,%,7E0,,,1,60000
+[BMS] Auxillary Battery SOC,Batt SOC,0x22E004,AD,0,100,%,7E0,,,1,60000
 [BMS] Available Charge Power,Max REGEN,0x220101,((f<8)+g)/100,0,98,kW,7D4,,,1,60000
 [BMS] Available Discharge Power,Max POWER,0x220101,((h<8)+i)/100,0,98,kW,7D4,,,1,60000
 [BMS] Battery Min Temperature,Batt MinTemp,0x220101,Signed(P),-40,80,C,7D4,,,1,60000
@@ -18,6 +20,8 @@ Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max
 [DelayedRefresh] Control Module Voltage,Alternator,,[42],0,65.535,V,,,,1,5000
 [DelayedRefresh] CoolantA,CoolantA,0x0167,B-40,-40,215,C,,,,1,5000
 [DelayedRefresh] CoolantB,CoolantB,0x0167,C-40,-40,215,C,,,,1,5000
+[EMS] Intake Temperature,IntakeTemp,0x22E001,AH*0.75-48,-500,500,C,,,,1,60000
+[EMS] Oil Temperature,OilTemp,0x22e001,AI*0.75-48,-500,500,C,,,,1,5000
 [Injection] OpenDuration_Inj_1,Inj_1_Open,0x22e002,INT16(X:W)*0.8192,0,65535,mS,,,,1,0
 [Injection] OpenDuration_Inj_2,Inj_2_Open,0x22e002,INT16(Z:Y)*0.8192,0,65535,mS,,,,1,0
 [Injection] OpenDuration_Inj_3,Inj_3_Open,0x22e002,INT16(AB:AA)*0.8192,0,65535,mS,,,,1,0
@@ -44,4 +48,3 @@ Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max
 [TPMS] Tyre Temperature FR,Temp FR,0x22c00b,F-50,-50,100,C,7A0,,,1,60000
 [TPMS] Tyre Temperature RL,Temp RL,0x22c00b,P-50,-50,100,C,7A0,,,1,60000
 [TPMS] Tyre Temperature RR,Temp RR,0x22c00b,U-50,-50,100,C,7A0,,,1,60000
-[EMS] Oil Temperature,OilTemp,0x22e001,AI*0.75-48,-500,500,C,,,,1,5000
