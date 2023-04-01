@@ -1,6 +1,6 @@
 Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max Value"""," ""Units"""," ""Header"""," ""startDiagnostic"""," ""stopDiagnostic"""," ""scale""",minimumRefreshDelayMillis
-[BMS] Auxillary Battery Life,Batt Life,0x22E004,AE,0,100,%,7E0,,,1,60000
-[BMS] Auxillary Battery SOC,Batt SOC,0x22E004,AD,0,100,%,7E0,,,1,60000
+[BMS] Auxillary Battery State of Charge,Batt SOC,0x22e004,AD,0,100,%,7E0,,,1,60000
+[BMS] Auxillary Battery State of Health,Batt SOH,0x22e004,AE,0,100,%,7E0,,,1,60000
 [BMS] Available Charge Power,Max REGEN,0x220101,((f<8)+g)/100,0,98,kW,7D4,,,1,60000
 [BMS] Available Discharge Power,Max POWER,0x220101,((h<8)+i)/100,0,98,kW,7D4,,,1,60000
 [BMS] Battery Min Temperature,Batt MinTemp,0x220101,Signed(P),-40,80,C,7D4,,,1,60000
@@ -8,13 +8,13 @@ Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max
 [BMS] Battery Module 02 Temperature,Batt Temp02,0x220101,Signed(R),-40,80,C,7D4,,,1,60000
 [BMS] Battery Module 03 Temperature,Batt Temp03,0x220101,Signed(S),-40,80,C,7D4,,,1,60000
 [BMS] Battery Module 04 Temperature,Batt Temp04,0x220101,Signed(T),-40,80,C,7D4,,,1,60000
-[BMS] State of Charge,SOC BMS,0x220101,E/2,0,100,%,7D4,,,1,60000
+[BMS] BMS State of Charge,SOC BMS,0x220101,E/2,0,100,%,7D4,,,1,60000
 [Cluster] FuelLevel,FuelLevel,0x22b002,avg(20:E/1.9361703271804),0,47,L,7C6,,,1,60000
 [Cluster] Odometer,Odometer_2,0x22b002,(H<8)+I,0,16777215,Km,7C6,,,1,60000
 [Cluster] Odometer,Odometer_1,0x22b002,Int24(G:H:I),0,16777215,km,7C6,,,1,60000
 [Custom] Current Gear,Gear,,LOOKUP([0C]/([0D]+0.1):0:0.1~26=6:27~34=5:35~44=4:45~59=3:60~91=2:91~1300=1),0,6,,,,,1,500
 [Custom] FuelSysStatus,FuelSysStatus,0x0103,LOOKUP(A:'EngineOff':1='Warmup':2='OK':4='OK':8='NOK':16='NOK'),0,16,,,,,1,3000
-[Custom] Instant Fuel Consumption,InstantConsumption,,LOOKUP([0D]:100/[ff1203]:0~5=[5E]),0,100,L/100km,,,,1,0
+[Custom] Instant Fuel Consumption,InstantConsumption,,LOOKUP([0D]:100/[ff1203]:0~5=[5E]),0,100,,,,,1,0
 [DelayedRefresh] AmbientAirTemp,OutsideTemp,,[46],-40,215,C,,,,1,60000
 [DelayedRefresh] Catalyst Temp B1S1,Cat B1S1,,[3C],0,6513.5,C,,,,1,5000
 [DelayedRefresh] Control Module Voltage,Alternator,,[42],0,65.535,V,,,,1,5000
@@ -22,6 +22,21 @@ Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max
 [DelayedRefresh] CoolantB,CoolantB,0x0167,C-40,-40,215,C,,,,1,5000
 [EMS] Intake Temperature,IntakeTemp,0x22E001,AH*0.75-48,-500,500,C,,,,1,60000
 [EMS] Oil Temperature,OilTemp,0x22e001,AI*0.75-48,-500,500,C,,,,1,5000
+[IGMP] Belt BL,Belt BL,0x22bc04,((g&4)>2),0,1,,770,,,1,2000
+[IGMP] Belt BM,Belt BM,0x22bc04,((g&8)>3),0,1,,770,,,1,2000
+[IGMP] Belt BR,Belt BR,0x22bc04,(g&2)>1,0,1,,770,,,1,2000
+[IGMP] Belt Driver,Belt Driver,0x22bc03,((F&2)>1),0,1,,770,,,1,2000
+[IGMP] Belt Passenger,Belt Passenger,0x22bc03,((F&4)>2),0,1,,770,,,1,2000
+[IGMP] Bonnet,Bonnet,0x22bc03,F&1,0,1,,770,,,1,2000
+[IGMP] DeFog,DeFog,0x22bc07,F,0,1,,770,,,1,2000
+[IGMP] FL Door Lock,FL Door Lock,0x22bc04,lookup(((E&8)>3):'U':0='L'),0,1,,770,,,1,2000
+[IGMP] FL Door Open,FL Door Open,0x22bc03,((E&32)>5),0,1,,770,,,1,2000
+[IGMP] FR Door Lock,FR Door Lock,0x22bc04,lookup(((E&4)>2):'U':0='L'),0,1,,770,,,1,2000
+[IGMP] FR Door Open,FR Door Open,0x22bc03,((E&16)>4),0,1,,770,,,1,2000
+[IGMP] On,On,0x22bc03,F&96,0,1,,770,,,1,2000
+[IGMP] RL Door Open,RL Door Open,0x22bc03,E&1,0,1,,770,,,1,2000
+[IGMP] RR Door Open,RR Door Open,0x22bc03,((E&4)>2),0,1,,770,,,1,2000
+[IGMP] Trunk door Open,Trunk door Open,0x22bc03,((E&128)>7),0,1,,770,,,1,2000
 [Injection] OpenDuration_Inj_1,Inj_1_Open,0x22e002,INT16(X:W)*0.8192,0,65535,mS,,,,1,0
 [Injection] OpenDuration_Inj_2,Inj_2_Open,0x22e002,INT16(Z:Y)*0.8192,0,65535,mS,,,,1,0
 [Injection] OpenDuration_Inj_3,Inj_3_Open,0x22e002,INT16(AB:AA)*0.8192,0,65535,mS,,,,1,0
