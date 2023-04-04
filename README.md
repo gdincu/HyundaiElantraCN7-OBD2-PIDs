@@ -1315,10 +1315,11 @@ CD: Current</td>
 
 The below are used with the Torque Pro app and therefore some of the formulas are based on the Torque Wiki https://wiki.torque-bhp.com/view/Equations
 
-<table class="js-csv-data csv-data">
+<table class="js-csv-data csv-data js-file-line-container">
       <thead>
-        <tr>
-            <th> "Name"</th>
+        <tr id="LC1" class="js-file-line">
+          <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+            <th>Name</th>
             <th> "ShortName"</th>
             <th> "ModeAndPID"</th>
             <th> "Equation"</th>
@@ -1333,7 +1334,38 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
         </tr>
       </thead>
       <tbody>
-          <tr>
+          <tr id="LC2" class="js-file-line">
+            <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
+              <td>[BMS] Auxillary Battery State of Charge</td>
+              <td>Batt SOC</td>
+              <td>0x22e004</td>
+              <td>AD</td>
+              <td>0</td>
+              <td>100</td>
+              <td>%</td>
+              <td>7E0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr id="LC3" class="js-file-line">
+            <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
+              <td>[BMS] Auxillary Battery State of Health</td>
+              <td>Batt SOH</td>
+              <td>0x22e004</td>
+              <td>AE</td>
+              <td>0</td>
+              <td>100</td>
+              <td>%</td>
+              <td>7E0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr id="LC4" class="js-file-line">
+            <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
               <td>[BMS] Available Charge Power</td>
               <td>Max REGEN</td>
               <td>0x220101</td>
@@ -1347,7 +1379,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC5" class="js-file-line">
+            <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
               <td>[BMS] Available Discharge Power</td>
               <td>Max POWER</td>
               <td>0x220101</td>
@@ -1361,9 +1394,10 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC6" class="js-file-line">
+            <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
               <td>[BMS] Battery Min Temperature</td>
-              <td>Batt MinT</td>
+              <td>Batt MinTemp</td>
               <td>0x220101</td>
               <td>Signed(P)</td>
               <td>-40</td>
@@ -1375,7 +1409,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC7" class="js-file-line">
+            <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
               <td>[BMS] Battery Module 01 Temperature</td>
               <td>Batt Temp01</td>
               <td>0x220101</td>
@@ -1389,7 +1424,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC8" class="js-file-line">
+            <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
               <td>[BMS] Battery Module 02 Temperature</td>
               <td>Batt Temp02</td>
               <td>0x220101</td>
@@ -1403,7 +1439,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC9" class="js-file-line">
+            <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
               <td>[BMS] Battery Module 03 Temperature</td>
               <td>Batt Temp03</td>
               <td>0x220101</td>
@@ -1417,7 +1454,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC10" class="js-file-line">
+            <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
               <td>[BMS] Battery Module 04 Temperature</td>
               <td>Batt Temp04</td>
               <td>0x220101</td>
@@ -1431,8 +1469,9 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
-              <td>[BMS] State of Charge</td>
+          <tr id="LC11" class="js-file-line">
+            <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
+              <td>[BMS] BMS State of Charge</td>
               <td>SOC BMS</td>
               <td>0x220101</td>
               <td>E/2</td>
@@ -1445,7 +1484,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC12" class="js-file-line">
+            <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
               <td>[Cluster] FuelLevel</td>
               <td>FuelLevel</td>
               <td>0x22b002</td>
@@ -1459,7 +1499,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC13" class="js-file-line">
+            <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
               <td>[Cluster] Odometer</td>
               <td>Odometer_2</td>
               <td>0x22b002</td>
@@ -1473,7 +1514,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC14" class="js-file-line">
+            <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
               <td>[Cluster] Odometer</td>
               <td>Odometer_1</td>
               <td>0x22b002</td>
@@ -1487,7 +1529,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC15" class="js-file-line">
+            <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
               <td>[Custom] Current Gear</td>
               <td>Gear</td>
               <td></td>
@@ -1501,7 +1544,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>500</td>
           </tr>
-          <tr>
+          <tr id="LC16" class="js-file-line">
+            <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
               <td>[Custom] FuelSysStatus</td>
               <td>FuelSysStatus</td>
               <td>0x0103</td>
@@ -1515,21 +1559,23 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>3000</td>
           </tr>
-          <tr>
+          <tr id="LC17" class="js-file-line">
+            <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
               <td>[Custom] Instant Fuel Consumption</td>
               <td>InstantConsumption</td>
               <td></td>
-              <td>LOOKUP(100/([ff1203]+0.01):0:0.1~50=100/[ff1203])</td>
+              <td>LOOKUP([0D]:100/[ff1203]:0~5=[5E])</td>
               <td>0</td>
               <td>100</td>
-              <td>L/100km</td>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
               <td>1</td>
               <td>0</td>
           </tr>
-          <tr>
+          <tr id="LC18" class="js-file-line">
+            <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
               <td>[DelayedRefresh] AmbientAirTemp</td>
               <td>OutsideTemp</td>
               <td></td>
@@ -1543,7 +1589,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC19" class="js-file-line">
+            <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
               <td>[DelayedRefresh] Catalyst Temp B1S1</td>
               <td>Cat B1S1</td>
               <td></td>
@@ -1557,7 +1604,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>5000</td>
           </tr>
-          <tr>
+          <tr id="LC20" class="js-file-line">
+            <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
               <td>[DelayedRefresh] Control Module Voltage</td>
               <td>Alternator</td>
               <td></td>
@@ -1571,7 +1619,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>5000</td>
           </tr>
-          <tr>
+          <tr id="LC21" class="js-file-line">
+            <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
               <td>[DelayedRefresh] CoolantA</td>
               <td>CoolantA</td>
               <td>0x0167</td>
@@ -1585,7 +1634,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>5000</td>
           </tr>
-          <tr>
+          <tr id="LC22" class="js-file-line">
+            <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
               <td>[DelayedRefresh] CoolantB</td>
               <td>CoolantB</td>
               <td>0x0167</td>
@@ -1599,7 +1649,278 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>5000</td>
           </tr>
-          <tr>
+          <tr id="LC23" class="js-file-line">
+            <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
+              <td>[DelayedRefresh] Coolant A&amp;B</td>
+              <td>CoolantA&amp;B</td>
+              <td>0x0167</td>
+              <td>LOOKUP(1::1='(B-40)\(C-40)')</td>
+              <td>-40</td>
+              <td>215</td>
+              <td>C</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>5000</td>
+          </tr>
+          <tr id="LC24" class="js-file-line">
+            <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
+              <td>[EMS] Intake Temperature</td>
+              <td>IntakeTemp</td>
+              <td>0x22E001</td>
+              <td>AH*0.75-48</td>
+              <td>-500</td>
+              <td>500</td>
+              <td>C</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr id="LC25" class="js-file-line">
+            <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
+              <td>[EMS] Oil Temperature</td>
+              <td>OilTemp</td>
+              <td>0x22e001</td>
+              <td>AI*0.75-48</td>
+              <td>-500</td>
+              <td>500</td>
+              <td>C</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>5000</td>
+          </tr>
+          <tr id="LC26" class="js-file-line">
+            <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
+              <td>[IGMP] Belt BL</td>
+              <td>Belt BL</td>
+              <td>0x22bc04</td>
+              <td>((g&amp;4)&gt;2)</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC27" class="js-file-line">
+            <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
+              <td>[IGMP] Belt BM</td>
+              <td>Belt BM</td>
+              <td>0x22bc04</td>
+              <td>((g&amp;8)&gt;3)</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC28" class="js-file-line">
+            <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
+              <td>[IGMP] Belt BR</td>
+              <td>Belt BR</td>
+              <td>0x22bc04</td>
+              <td>(g&amp;2)&gt;1</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC29" class="js-file-line">
+            <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
+              <td>[IGMP] Belt Driver</td>
+              <td>Belt Driver</td>
+              <td>0x22bc03</td>
+              <td>((F&amp;2)&gt;1)</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC30" class="js-file-line">
+            <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
+              <td>[IGMP] Belt Passenger</td>
+              <td>Belt Passenger</td>
+              <td>0x22bc03</td>
+              <td>((F&amp;4)&gt;2)</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC31" class="js-file-line">
+            <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
+              <td>[IGMP] Bonnet</td>
+              <td>Bonnet</td>
+              <td>0x22bc03</td>
+              <td>F&amp;1</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC32" class="js-file-line">
+            <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
+              <td>[IGMP] DeFog</td>
+              <td>DeFog</td>
+              <td>0x22bc07</td>
+              <td>F</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC33" class="js-file-line">
+            <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
+              <td>[IGMP] FL Door Lock</td>
+              <td>FL Door Lock</td>
+              <td>0x22bc04</td>
+              <td>lookup(((E&amp;8)&gt;3):'U':0='L')</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC34" class="js-file-line">
+            <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
+              <td>[IGMP] FL Door Open</td>
+              <td>FL Door Open</td>
+              <td>0x22bc03</td>
+              <td>((E&amp;32)&gt;5)</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC35" class="js-file-line">
+            <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
+              <td>[IGMP] FR Door Lock</td>
+              <td>FR Door Lock</td>
+              <td>0x22bc04</td>
+              <td>lookup(((E&amp;4)&gt;2):'U':0='L')</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC36" class="js-file-line">
+            <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
+              <td>[IGMP] FR Door Open</td>
+              <td>FR Door Open</td>
+              <td>0x22bc03</td>
+              <td>((E&amp;16)&gt;4)</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC37" class="js-file-line">
+            <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
+              <td>[IGMP] On</td>
+              <td>On</td>
+              <td>0x22bc03</td>
+              <td>F&amp;96</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC38" class="js-file-line">
+            <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
+              <td>[IGMP] RL Door Open</td>
+              <td>RL Door Open</td>
+              <td>0x22bc03</td>
+              <td>E&amp;1</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC39" class="js-file-line">
+            <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
+              <td>[IGMP] RR Door Open</td>
+              <td>RR Door Open</td>
+              <td>0x22bc03</td>
+              <td>((E&amp;4)&gt;2)</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC40" class="js-file-line">
+            <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
+              <td>[IGMP] Trunk door Open</td>
+              <td>Trunk door Open</td>
+              <td>0x22bc03</td>
+              <td>((E&amp;128)&gt;7)</td>
+              <td>0</td>
+              <td>1</td>
+              <td></td>
+              <td>770</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2000</td>
+          </tr>
+          <tr id="LC41" class="js-file-line">
+            <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
               <td>[Injection] OpenDuration_Inj_1</td>
               <td>Inj_1_Open</td>
               <td>0x22e002</td>
@@ -1613,7 +1934,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>0</td>
           </tr>
-          <tr>
+          <tr id="LC42" class="js-file-line">
+            <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
               <td>[Injection] OpenDuration_Inj_2</td>
               <td>Inj_2_Open</td>
               <td>0x22e002</td>
@@ -1627,7 +1949,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>0</td>
           </tr>
-          <tr>
+          <tr id="LC43" class="js-file-line">
+            <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
               <td>[Injection] OpenDuration_Inj_3</td>
               <td>Inj_3_Open</td>
               <td>0x22e002</td>
@@ -1641,7 +1964,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>0</td>
           </tr>
-          <tr>
+          <tr id="LC44" class="js-file-line">
+            <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
               <td>[Injection] OpenDuration_Inj_4</td>
               <td>Inj_4_Open</td>
               <td>0x22e002</td>
@@ -1655,7 +1979,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>0</td>
           </tr>
-          <tr>
+          <tr id="LC45" class="js-file-line">
+            <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
               <td>[OBFCM] Total Fuel Consumed (Lifetime)</td>
               <td>FuelConsumedTotal</td>
               <td>0x0917</td>
@@ -1669,7 +1994,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC46" class="js-file-line">
+            <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
               <td>[OBFCM] Total Fuel Consumed (Recent)</td>
               <td>FuelConsumedRecent</td>
               <td>0x0917</td>
@@ -1683,7 +2009,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC47" class="js-file-line">
+            <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
               <td>[TPMS] Alert FL</td>
               <td>Alert FL</td>
               <td>0x22c00b</td>
@@ -1697,7 +2024,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC48" class="js-file-line">
+            <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
               <td>[TPMS] Alert FR</td>
               <td>Alert FR</td>
               <td>0x22c00b</td>
@@ -1711,7 +2039,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC49" class="js-file-line">
+            <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
               <td>[TPMS] Alert RL</td>
               <td>Alert RL</td>
               <td>0x22c00b</td>
@@ -1725,7 +2054,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC50" class="js-file-line">
+            <td id="L50" class="blob-num js-line-number" data-line-number="50"></td>
               <td>[TPMS] Alert RR</td>
               <td>Alert RR</td>
               <td>0x22c00b</td>
@@ -1739,7 +2069,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC51" class="js-file-line">
+            <td id="L51" class="blob-num js-line-number" data-line-number="51"></td>
               <td>[TPMS] Battery FL</td>
               <td>Batt FL</td>
               <td>0x22c00b</td>
@@ -1753,7 +2084,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC52" class="js-file-line">
+            <td id="L52" class="blob-num js-line-number" data-line-number="52"></td>
               <td>[TPMS] Battery FR</td>
               <td>Batt FR</td>
               <td>0x22c00b</td>
@@ -1767,7 +2099,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC53" class="js-file-line">
+            <td id="L53" class="blob-num js-line-number" data-line-number="53"></td>
               <td>[TPMS] Battery RL</td>
               <td>Batt RL</td>
               <td>0x22c00b</td>
@@ -1781,7 +2114,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC54" class="js-file-line">
+            <td id="L54" class="blob-num js-line-number" data-line-number="54"></td>
               <td>[TPMS] Battery RR</td>
               <td>Batt RR</td>
               <td>0x22c00b</td>
@@ -1795,7 +2129,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC55" class="js-file-line">
+            <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
               <td>[TPMS] ID FL</td>
               <td>TPMS ID FL</td>
               <td>0x22c002</td>
@@ -1809,7 +2144,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC56" class="js-file-line">
+            <td id="L56" class="blob-num js-line-number" data-line-number="56"></td>
               <td>[TPMS] ID FR</td>
               <td>TPMS ID FR</td>
               <td>0x22c002</td>
@@ -1823,7 +2159,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC57" class="js-file-line">
+            <td id="L57" class="blob-num js-line-number" data-line-number="57"></td>
               <td>[TPMS] ID RL</td>
               <td>TPMS ID RL</td>
               <td>0x22c002</td>
@@ -1837,7 +2174,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC58" class="js-file-line">
+            <td id="L58" class="blob-num js-line-number" data-line-number="58"></td>
               <td>[TPMS] ID RR</td>
               <td>TPMS ID RR</td>
               <td>0x22c002</td>
@@ -1851,7 +2189,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC59" class="js-file-line">
+            <td id="L59" class="blob-num js-line-number" data-line-number="59"></td>
               <td>[TPMS] Tyre Pressure FL</td>
               <td>Press FL</td>
               <td>0x22c00b</td>
@@ -1865,7 +2204,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC60" class="js-file-line">
+            <td id="L60" class="blob-num js-line-number" data-line-number="60"></td>
               <td>[TPMS] Tyre Pressure FR</td>
               <td>Press FR</td>
               <td>0x22c00b</td>
@@ -1879,7 +2219,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC61" class="js-file-line">
+            <td id="L61" class="blob-num js-line-number" data-line-number="61"></td>
               <td>[TPMS] Tyre Pressure RL</td>
               <td>Press RL</td>
               <td>0x22c00b</td>
@@ -1893,7 +2234,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC62" class="js-file-line">
+            <td id="L62" class="blob-num js-line-number" data-line-number="62"></td>
               <td>[TPMS] Tyre Pressure RR</td>
               <td>Press RR</td>
               <td>0x22c00b</td>
@@ -1907,7 +2249,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC63" class="js-file-line">
+            <td id="L63" class="blob-num js-line-number" data-line-number="63"></td>
               <td>[TPMS] Tyre Temperature FL</td>
               <td>Temp FL</td>
               <td>0x22c00b</td>
@@ -1921,7 +2264,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC64" class="js-file-line">
+            <td id="L64" class="blob-num js-line-number" data-line-number="64"></td>
               <td>[TPMS] Tyre Temperature FR</td>
               <td>Temp FR</td>
               <td>0x22c00b</td>
@@ -1935,7 +2279,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC65" class="js-file-line">
+            <td id="L65" class="blob-num js-line-number" data-line-number="65"></td>
               <td>[TPMS] Tyre Temperature RL</td>
               <td>Temp RL</td>
               <td>0x22c00b</td>
@@ -1949,7 +2294,8 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
+          <tr id="LC66" class="js-file-line">
+            <td id="L66" class="blob-num js-line-number" data-line-number="66"></td>
               <td>[TPMS] Tyre Temperature RR</td>
               <td>Temp RR</td>
               <td>0x22c00b</td>
@@ -1963,19 +2309,65 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>60000</td>
           </tr>
-          <tr>
-              <td>[EMS] Oil Temperature</td>
-              <td>OilTemp</td>
-              <td>0x22e001</td>
-              <td>AI*0.75-48</td>
-              <td>-500</td>
-              <td>500</td>
-              <td>C</td>
+          <tr id="LC67" class="js-file-line">
+            <td id="L67" class="blob-num js-line-number" data-line-number="67"></td>
+              <td>[TPMS] FL Stats</td>
+              <td>FL Stats</td>
+              <td>0x22c00b</td>
+              <td>LOOKUP(1::1='INT(J/5+0.5)\(K-50)')</td>
+              <td>-50</td>
+              <td>100</td>
               <td></td>
+              <td>7A0</td>
               <td></td>
               <td></td>
               <td>1</td>
-              <td>5000</td>
+              <td>60000</td>
+          </tr>
+          <tr id="LC68" class="js-file-line">
+            <td id="L68" class="blob-num js-line-number" data-line-number="68"></td>
+              <td>[TPMS] FR Stats</td>
+              <td>FR Stats</td>
+              <td>0x22c00b</td>
+              <td>LOOKUP(1::1='INT(E/5+0.5)\(F-50)')</td>
+              <td>-50</td>
+              <td>100</td>
+              <td></td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr id="LC69" class="js-file-line">
+            <td id="L69" class="blob-num js-line-number" data-line-number="69"></td>
+              <td>[TPMS] RL Stats</td>
+              <td>RL Stats</td>
+              <td>0x22c00b</td>
+              <td>LOOKUP(1::1='INT(O/5+0.5)\(P-50)')</td>
+              <td>-50</td>
+              <td>100</td>
+              <td></td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr id="LC70" class="js-file-line">
+            <td id="L70" class="blob-num js-line-number" data-line-number="70"></td>
+              <td>[TPMS] RR Stats</td>
+              <td>RR Stats</td>
+              <td>0x22c00b</td>
+              <td>LOOKUP(1::1='INT(T/5+0.5)\(U-50)')</td>
+              <td>-50</td>
+              <td>100</td>
+              <td></td>
+              <td>7A0</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
           </tr>
       </tbody>
     </table>
