@@ -20,7 +20,7 @@ Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max
 [DelayedRefresh] Control Module Voltage,Alternator,,[42],0,65.535,V,,,,1,5000
 [DelayedRefresh] CoolantA,CoolantA,0x0167,B-40,-40,215,C,,,,1,5000
 [DelayedRefresh] CoolantB,CoolantB,0x0167,C-40,-40,215,C,,,,1,5000
-[DelayedRefresh] Coolant A&B,CoolantA&B,0x0167,LOOKUP(1::1=(B-40)'(C-40)),-40,215,C,,,,1,5000
+[DelayedRefresh] Coolant A&B,CoolantA&B,0x0167,LOOKUP(1::1='(B-40)\(C-40)'),-40,215,C,,,,1,5000
 [EMS] Intake Temperature,IntakeTemp,0x22E001,AH*0.75-48,-500,500,C,,,,1,60000
 [EMS] Oil Temperature,OilTemp,0x22e001,AI*0.75-48,-500,500,C,,,,1,5000
 [IGMP] Belt BL,Belt BL,0x22bc04,((g&4)>2),0,1,,770,,,1,2000
@@ -64,7 +64,7 @@ Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max
 [TPMS] Tyre Temperature FR,Temp FR,0x22c00b,F-50,-50,100,C,7A0,,,1,60000
 [TPMS] Tyre Temperature RL,Temp RL,0x22c00b,P-50,-50,100,C,7A0,,,1,60000
 [TPMS] Tyre Temperature RR,Temp RR,0x22c00b,U-50,-50,100,C,7A0,,,1,60000
-[TPMS] FL Stats,FL Stats,0x22c00b,LOOKUP(1::1=(J/5)'(K-50)),-200,200,,7A0,,,1,60000
-[TPMS] FR Stats,FR Stats,0x22c00b,LOOKUP(1::1=(E/5)'(F-50)),-200,200,,7A0,,,,
-[TPMS] RL Stats,RL Stats,0x22c00b,LOOKUP(1::1=(O/5)'(P-50)),-200,200,,7A0,,,,
-[TPMS] RR Stats,RR Stats,0x22c00b,LOOKUP(1::1=(T/5)'(U-50)),-200,200,,7A0,,,,
+[TPMS] FL Stats,FL Stats,0x22c00b,LOOKUP(1::1='INT(J/5+0.5)\(K-50)'),-50,100,,7A0,,,1,60000
+[TPMS] FR Stats,FR Stats,0x22c00b,LOOKUP(1::1='INT(E/5+0.5)\(F-50)'),-50,100,,7A0,,,1,60000
+[TPMS] RL Stats,RL Stats,0x22c00b,LOOKUP(1::1='INT(O/5+0.5)\(P-50)'),-50,100,,7A0,,,1,60000
+[TPMS] RR Stats,RR Stats,0x22c00b,LOOKUP(1::1='INT(T/5+0.5)\(U-50)'),-50,100,,7A0,,,1,60000
