@@ -1544,6 +1544,21 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>1</td>
               <td>500</td>
           </tr>
+          <tr id="LC15" class="js-file-line">
+            <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
+              <td>[Custom] Average Fuel Consumption (Lifetime)</td>
+              <td>AverageFuelConsumptionLifetime</td>
+              <td>0x22b002</td>
+              <td>[0917]/((H<8)+I)*100</td>
+              <td>0</td>
+              <td>100</td>
+              <td>L/100Km</td>
+              <td>7C6</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
           <tr id="LC16" class="js-file-line">
             <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
               <td>[Custom] FuelSysStatus</td>
@@ -1984,7 +1999,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>[OBFCM] Total Fuel Consumed (Lifetime)</td>
               <td>FuelConsumedTotal</td>
               <td>0x0917</td>
-              <td>int32(N:O:P:Q)/100</td>
+              <td>int32(M:N:O:P)/100</td>
               <td>0</td>
               <td>42949672.95</td>
               <td>L</td>
@@ -1999,7 +2014,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>[OBFCM] Total Fuel Consumed (Recent)</td>
               <td>FuelConsumedRecent</td>
               <td>0x0917</td>
-              <td>int32(J:K:L:M)/100</td>
+              <td>int32(I:J:K:L)/100</td>
               <td>0</td>
               <td>42949672.95</td>
               <td>L</td>
