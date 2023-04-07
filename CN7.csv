@@ -17,6 +17,9 @@ Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max
 [Custom] Current Gear,Gear,,LOOKUP([0C]/([0D]+0.1):0:0.1~26=6:27~34=5:35~44=4:45~59=3:60~91=2:91~1300=1),0,6,,,,,1,500
 [Custom] FuelSysStatus,FuelSysStatus,0x0103,LOOKUP(A:'EngineOff':1='Warmup':2='OK':4='OK':8='NOK':16='NOK'),0,16,,,,,1,3000
 [Custom] Instant Fuel Consumption,InstantConsumption,,LOOKUP([0D]:100/[ff1203]:0~5=[5E]),0,100,,,,,1,0
+[Custom] Percentage Of Driving Time (Lifetime),PercentageOfDrivingTimeLifetime,0x0916,1-((int32(AC:AD:AE:AF))/(int32(U:V:X:Y))),0,100,%,,,,1,60000
+[Custom] Percentage Of Idle Time (Lifetime),PercentageOfIdleTimeLifetime,0x0916,(int32(AC:AD:AE:AF))/(int32(U:V:X:Y)),0,100,%,,,,1,60000
+[Custom] Total Engine Driving Run Time (Lifetime),Total Engine Driving Run Time (Lifetime),0x0916,(int32(U:V:X:Y))-(int32(AC:AD:AE:AF)),0,999999999,,,,,1,60000
 [Custom] TPMS FL Stats,FL Stats,0x22c00b,LOOKUP(1::1='INT(J/5+0.5)\(K-50)'),-50,100,,7A0,,,1,60000
 [Custom] TPMS FR Stats,FR Stats,0x22c00b,LOOKUP(1::1='INT(E/5+0.5)\(F-50)'),-50,100,,7A0,,,1,60000
 [Custom] TPMS RL Stats,RL Stats,0x22c00b,LOOKUP(1::1='INT(O/5+0.5)\(P-50)'),-50,100,,7A0,,,1,60000
