@@ -10,22 +10,23 @@ Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max
 [BMS] Battery Module 04 Temperature,Batt Temp04,0x220101,Signed(T),-40,80,C,7D4,,,1,60000
 [BMS] BMS State of Charge,SOC BMS,0x220101,E/2,0,100,%,7D4,,,1,60000
 [Cluster] FuelLevel,FuelLevel,0x22b002,avg(20:E/1.9361703271804),0,47,L,7C6,,,1,60000
-[Cluster] Odometer1,Odometer_2,0x22b002,(H<8)+I,0,16777215,Km,7C6,,,1,60000
-[Cluster] Odometer2,Odometer_1,0x22b002,Int24(G:H:I),0,16777215,km,7C6,,,1,60000
-[Custom] Average Fuel Consumption (Lifetime),AverageFuelConsumptionLifetime,0x22b002,[0917]/((H<8)+I)*100,0,100,L/100Km,7C6,,,1,60000
+[Cluster]_Odometer,Odometer,0x22b002,Int24(G:H:I),0,16777215,km,7C6,,,1,60000
+[Custom] Average Fuel Consumption (Lifetime),AverageFuelConsumptionLifetime,,VAL{Var_Fuel_Lifetime}/VAL{Var_Odometer}*100,0,100,L/100Km,7C6,,,1,60000
 [Custom] Coolant A & B,CoolantA&B,0x0167,LOOKUP(1::1='(B-40)\(C-40)'),-40,215,C,,,,1,5000
 [Custom] Current Gear,Gear,,LOOKUP([0C]/([0D]+0.1):0:0.1~26=6:27~34=5:35~44=4:45~59=3:60~91=2:91~1300=1),0,6,,,,,1,500
 [Custom] FuelSysStatus,FuelSysStatus,0x0103,LOOKUP(A:'EngineOff':1='Warmup':2='OK':4='OK':8='NOK':16='NOK'),0,16,,,,,1,3000
 [Custom] Instant Fuel Consumption,InstantConsumption,,LOOKUP([0D]:100/[ff1203]:0~5=[5E]),0,100,,,,,1,0
-[Custom] Percentage Of Driving Time (Lifetime),PercentageOfDrivingTimeLifetime,0x0916,(1-((int32(AC:AD:AE:AF))/(int32(U:V:X:Y))))*100,0,100,%,,,,1,60000
-[Custom] Percentage Of Idle Time (Lifetime),PercentageOfIdleTimeLifetime,0x0916,((int32(AC:AD:AE:AF))/(int32(U:V:X:Y)))*100,0,100,%,,,,1,60000
-[Custom] Percentage Of City Driving (Lifetime),PercentageOfCityDriving,0x0919,int32(U:V:X:Y)/int32(E:F:G:H)*100,0,100,%,,,,1,60000
-[Custom] Percentage Of Highway Driving (Lifetime),PercentageOfHighwayDriving,0x0919,(int32(E:F:G:H)-int32(M:N:O:P)-int32(U:V:X:Y))/int32(E:F:G:H)*100,0,100,%,,,,1,60000
-[Custom] Total Engine Driving Run Time (Lifetime),Total Engine Driving Run Time (Lifetime),0x0916,(int32(U:V:X:Y))-(int32(AC:AD:AE:AF)),0,999999999,,,,,1,60000
+[Custom] Percentage Of City Driving (Lifetime),PercentageOfCityDriving,,VAL{Var_Citytime_Lifetime}/VAL{Var_Engine_Runtime_Lifetime}*100,0,100,%,,,,1,60000
+[Custom] Percentage Of Driving Time (Lifetime),PercentageOfDrivingTimeLifetime,,(1-(VAL{Var_Engine_Idletime_Lifetime}/VAL{Var_Engine_Runtime_Lifetime}))*100,0,100,%,,,,1,60000
+[Custom] Percentage Of Highway Driving (Lifetime),PercentageOfHighwayDriving,,(VAL{Var_Engine_Runtime_Lifetime}-VAL{Var_Engine_Idletime_Lifetime}-Var_Citytime_Lifetime)/VAL{Var_Engine_Runtime_Lifetime}*100,0,100,%,,,,1,60000
+[Custom] Percentage Of Idle Time (Lifetime),PercentageOfIdleTimeLifetime,,VAL{Var_Engine_Idletime_Lifetime}/VAL{Var_Engine_Runtime_Lifetime}*100,0,100,%,,,,1,60000
+[Custom] Total Engine Driving Run Time (Lifetime),Total Engine Driving Run Time (Lifetime),,VAL{Var_Engine_Runtime_Lifetime}-VAL{Var_Engine_Idletime_Lifetime},0,999999999,s,,,,1,60000
 [Custom] TPMS FL Stats,FL Stats,0x22c00b,LOOKUP(1::1='INT(J/5+0.5)\(K-50)'),-50,100,,7A0,,,1,60000
 [Custom] TPMS FR Stats,FR Stats,0x22c00b,LOOKUP(1::1='INT(E/5+0.5)\(F-50)'),-50,100,,7A0,,,1,60000
 [Custom] TPMS RL Stats,RL Stats,0x22c00b,LOOKUP(1::1='INT(O/5+0.5)\(P-50)'),-50,100,,7A0,,,1,60000
 [Custom] TPMS RR Stats,RR Stats,0x22c00b,LOOKUP(1::1='INT(T/5+0.5)\(U-50)'),-50,100,,7A0,,,1,60000
+[Custom] Average Speed incl idle (Lifetime),AverageSpeedLifetimeInclIdle,,VAL{Var_Odometer}/(VAL{Var_Engine_Runtime_Lifetime}/3600),0,200,Km/h,,,,1,60000
+[Custom] Average Speed excl idle (Lifetime),AverageSpeedLifetimeExclIdle,,VAL{Var_Odometer}/((VAL{Var_Engine_Runtime_Lifetime}-VAL{Var_Engine_Idletime_Lifetime})/3600),0,200,Km/h,,,,1,60000
 [DelayedRefresh] AmbientAirTemp,OutsideTemp,,[46],-40,215,C,,,,1,60000
 [DelayedRefresh] Catalyst Temp B1S1,Cat B1S1,,[3C],0,6513.5,C,,,,1,5000
 [DelayedRefresh] Control Module Voltage,Alternator,,[42],0,65.535,V,,,,1,5000
@@ -88,3 +89,8 @@ Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max
 [TPMS] Tyre Temperature FR,Temp FR,0x22c00b,F-50,-50,100,C,7A0,,,1,60000
 [TPMS] Tyre Temperature RL,Temp RL,0x22c00b,P-50,-50,100,C,7A0,,,1,60000
 [TPMS] Tyre Temperature RR,Temp RR,0x22c00b,U-50,-50,100,C,7A0,,,1,60000
+Var_Odometer,Var_Odometer,0x22b002,(H<8)+I,0,16777215,Km,7C6,,,1,60000
+Var_Fuel_Lifetime,Var_Fuel_Lifetime,0x0917,int32(M:N:O:P)/100,0,42949672.95,L,,,,1,60000
+Var_Engine_Runtime_Lifetime,Var_Engine_Runtime_Lifetime,0x0916,int32(U:V:X:Y),0,999999999,s,,,,1,60000
+Var_Engine_Idletime_Lifetime,TotalIdleEngineRunTimeLifetime,0x0916,int32(AC:AD:AE:AF),0,999999999,s,,,,1,60000
+Var_Citytime_Lifetime,Var_Citytime_Lifetime,0x0919,int32(U:V:X:Y),0,999999999,s,,,,1,60000
