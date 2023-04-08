@@ -1538,7 +1538,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>0</td>
               <td>100</td>
               <td>L/100Km</td>
-              <td>7C6</td>
+              <td></td>
               <td></td>
               <td></td>
               <td>1</td>
@@ -1718,7 +1718,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>-50</td>
               <td>100</td>
               <td></td>
-              <td>7A0</td>
+              <td></td>
               <td></td>
               <td></td>
               <td>1</td>
@@ -1733,7 +1733,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>-50</td>
               <td>100</td>
               <td></td>
-              <td>7A0</td>
+              <td></td>
               <td></td>
               <td></td>
               <td>1</td>
@@ -1748,7 +1748,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>-50</td>
               <td>100</td>
               <td></td>
-              <td>7A0</td>
+              <td></td>
               <td></td>
               <td></td>
               <td>1</td>
@@ -1763,7 +1763,7 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>-50</td>
               <td>100</td>
               <td></td>
-              <td>7A0</td>
+              <td></td>
               <td></td>
               <td></td>
               <td>1</td>
@@ -2393,6 +2393,36 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
               <td>0</td>
               <td>999999999</td>
               <td>s</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+		  <tr id="LC73" class="js-file-line">
+            <td id="L73" class="blob-num js-line-number" data-line-number="73"></td>
+              <td>OBFCM_Total_Distance_Traveled_Lifetime</td>
+              <td>Total_Distance_Traveled_Lifetime</td>
+              <td>0x0917</td>
+              <td>int32(E:F:G:H)/10</td>
+              <td>0</td>
+              <td>429496729.5</td>
+              <td>Km</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>60000</td>
+          </tr>
+          <tr id="LC73" class="js-file-line">
+            <td id="L73" class="blob-num js-line-number" data-line-number="73"></td>
+              <td>OBFCM_Total_Distance_Traveled_Recent</td>
+              <td>Total_Distance_Traveled_Recent</td>
+              <td>0x0917</td>
+              <td>int32(A:B:C:D)/10</td>
+              <td>0</td>
+              <td>429496729.5</td>
+              <td>Km</td>
               <td></td>
               <td></td>
               <td></td>
