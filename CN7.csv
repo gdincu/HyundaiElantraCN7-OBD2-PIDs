@@ -19,6 +19,7 @@ Custom_Coolant_AB,Coolant_AB,,LOOKUP(1::1='VAL{DelayedRefresh_Coolant_A}\VAL{Del
 Custom_Current_Gear,Gear,,LOOKUP([0C]/([0D]+0.1):0:0.1~26=6:27~34=5:35~44=4:45~59=3:60~91=2:91~1300=1),0,6,,,,,1,500
 Custom_Fuel_Sys_Status,Fuel_Sys_Status,0x0103,LOOKUP(A:'EngineOff':1='Warmup':2='OK':4='OK':8='NOK':16='NOK'),0,16,,,,,1,3000
 Custom_Instant_Fuel_Consumption,Instant_Consumption,,LOOKUP([0D]:100/[ff1203]:0~5=[5E]),0,100,,,,,1,0
+Custom_Instant_BSFC,Instant_BSFC,,[9D]/([ff1226]*0.95),0,1000,g/HP,,,,1,0
 Custom_Percentage_Of_City_Driving_Lifetime,PctCityDriving,,VAL{OBFCM_Total_City_Propulsion_System_Active_Time_Lifetime}/VAL{OBFCM_Total_Engine_Run_Time_Lifetime}*100,0,100,%,,,,1,60000
 Custom_Percentage_Of_Driving_Time_Lifetime,PctDrivingTimeLifetime,,(1-(VAL{OBFCM_Total_Idle_Engine_Run_Time_Lifetime}/VAL{OBFCM_Total_Engine_Run_Time_Lifetime}))*100,0,100,%,,,,1,60000
 Custom_Percentage_Of_Highway_Driving_Lifetime,PctHighwayDriving,,(VAL{OBFCM_Total_Engine_Run_Time_Lifetime}-VAL{OBFCM_Total_Idle_Engine_Run_Time_Lifetime}-VAL{OBFCM_Total_City_Propulsion_System_Active_Time_Lifetime})/VAL{OBFCM_Total_Engine_Run_Time_Lifetime}*100,0,100,%,,,,1,60000
