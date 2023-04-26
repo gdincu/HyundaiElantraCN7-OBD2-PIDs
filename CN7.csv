@@ -24,6 +24,7 @@ Custom_Percentage_Of_City_Driving_Lifetime,PctCityDriving,,VAL{OBFCM_Total_City_
 Custom_Percentage_Of_Driving_Time_Lifetime,PctDrivingTimeLifetime,,(1-(VAL{OBFCM_Total_Idle_Engine_Run_Time_Lifetime}/VAL{OBFCM_Total_Engine_Run_Time_Lifetime}))*100,0,100,%,,,,1,60000
 Custom_Percentage_Of_Highway_Driving_Lifetime,PctHighwayDriving,,(VAL{OBFCM_Total_Engine_Run_Time_Lifetime}-VAL{OBFCM_Total_Idle_Engine_Run_Time_Lifetime}-VAL{OBFCM_Total_City_Propulsion_System_Active_Time_Lifetime})/VAL{OBFCM_Total_Engine_Run_Time_Lifetime}*100,0,100,%,,,,1,60000
 Custom_Percentage_Of_Idle_Time_Lifetime,PctIdleTimeLifetime,,VAL{OBFCM_Total_Idle_Engine_Run_Time_Lifetime}/VAL{OBFCM_Total_Engine_Run_Time_Lifetime}*100,0,100,%,,,,1,60000
+Custom_RPM,Revs,,INT([0C]/100)/10,0,8,rpm,,,,1,0
 Custom_Total_Engine_Driving_Time_Lifetime,Total_Driving_Run_Time_Lifetime,,VAL{OBFCM_Total_Engine_Run_Time_Lifetime}-VAL{OBFCM_Total_Idle_Engine_Run_Time_Lifetime},0,999999999,s,,,,1,60000
 Custom_TPMS_FL_Stats,TPMS_FL,,LOOKUP(1::1='int(VAL{TPMS_Tyre_Pressure_FL}+0.5)\VAL{TPMS_Tyre_Temperature_FL}'),-50,100,,,,,1,60000
 Custom_TPMS_FR_Stats,TPMS_FR,,LOOKUP(1::1='int(VAL{TPMS_Tyre_Pressure_FR}+0.5)\VAL{TPMS_Tyre_Temperature_FR}'),-50,100,,,,,1,60000
