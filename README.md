@@ -2873,4 +2873,4 @@ The below are used with the Torque Pro app and therefore some of the formulas ar
 
 This repo also includes a Torque Pro dashboard setup based on the above list of PIDs that could be easily imported into the app:
 
-<img src="https://user-images.githubusercontent.com/20664969/234665252-f4b2dcb0-cf85-4da8-acbd-1fe2437105c3.png" width="673" height="549"></img>
+<img src="https://user-images.githubusercontent.com/20664969/234874093-794d3863-9821-4b1d-acc3-28474330ab3d.png"></img>
