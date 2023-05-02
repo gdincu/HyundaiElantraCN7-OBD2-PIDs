@@ -2,7 +2,7 @@
 
 This is a list of OBD2 PIDs supported by a Hyundai Elantra CN7 MY2023 with the 1.6 MPI Smartstream engine sold in Europe.
 
-The vehicle has been built in the Ulsan factory in South Korea so I'm assuming the these should also work for the 1.6 MPI and 1.6 LPI engine variants sold over there.
+The vehicle has been built in the Ulsan factory in South Korea so I'm assuming that these should also work for the 1.6 MPI and 1.6 LPI engine variants sold over there.
 
 These have been tested using the following setup:
 <ul>
@@ -1313,7 +1313,7 @@ CD: Current</td>
     
 <h2> Custom PIDs </h2>
 
-<a href="https://github.com/gdincu/HyundaiElantraCN7-OBD2-PIDs/blob/main/CN7.csv">These</a> PIDs are setup to be used via the Torque Pro app and therefore some of the formulas are based on the <a href="https://wiki.torque-bhp.com/view/Equations">Torque Wiki</a>
+<a href="https://github.com/gdincu/HyundaiElantraCN7-OBD2-PIDs/blob/main/CN7.csv">These</a> PIDs are setup to be used via the Torque Pro app and therefore some of the formulas are based on the <a href="https://wiki.torque-bhp.com/view/Equations">Torque Wiki</a>.
   
 <h2> Torque Pro Dashboards </h2>
 
