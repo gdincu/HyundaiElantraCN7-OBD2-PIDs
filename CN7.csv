@@ -16,7 +16,8 @@
 "Custom_Average_Speed_Excl_Idle_Lifetime","AverageSpeedLifetimeExclIdle","","VAL{Cluster_Odometer_CalcMethod1}/((VAL{OBFCM_Total_Engine_Run_Time_Lifetime}-VAL{OBFCM_Total_Idle_Engine_Run_Time_Lifetime})/3600)",0,200,"Km/h","","","",1,60000
 "Custom_Average_Speed_Incl_Idle_Lifetime","AverageSpeedLifetimeInclIdle","","VAL{Cluster_Odometer_CalcMethod1}/(VAL{OBFCM_Total_Engine_Run_Time_Lifetime}/3600)",0,200,"Km/h","","","",1,60000
 "Custom_Coolant_AB","Coolant_AB","","LOOKUP(1::1='VAL{DelayedRefresh_Coolant_A} VAL{DelayedRefresh_Coolant_B}')",-40,215,"C","","","",1,5000
-"Custom_Current_Gear","Gear","","LOOKUP([0C]/([0D]+0.1):0:0.1~26=6:27~34=5:35~44=4:45~59=3:60~91=2:91~1300=1)",0,6,"","","","",1,200
+"Custom_Gear_Current","CurrentGear","","LOOKUP([0C]/([0D]+0.1):0:0.1~26=6:27~34=5:35~44=4:45~59=3:60~91=2:91~1300=1)",0,6,"","","","",1,200
+"Custom_Gear_Ideal","IdealGear","","LOOKUP([0D]:6:0=0:0.1~19.9=1:20~29.9=2:30~39.1=3:39.2~51.2=4:51.3~59.2=5)",0,6,"","","","",1,200
 "Custom_Fuel_Sys_Status","Fuel_Sys_Status","0x0103","LOOKUP(A:'EngineOff':1='Warmup':2='OK':4='OK':8='NOK':16='NOK')",0,16,"","","","",1,3000
 "Custom_Instant_BSFC","Instant_BSFC","","[9D]/([ff1226]*0.95)",0,1000,"g/HP","","","",1,0
 "Custom_Instant_Fuel_Consumption","Instant_Consumption","","LOOKUP([0D]:100/[ff1203]:0~5=[5E])",0,100,"L","","","",1,0
