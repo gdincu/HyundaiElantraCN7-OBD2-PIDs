@@ -1327,5 +1327,5 @@ This repo also includes two Torque Pro dashboard setups based on the above list 
 
 Please note that the contents of the theme folder also need to be amended for each dashboard to work.
 
-Theme folder:		\Android\data\org.prowl.torque\files\themeDir
+Theme folder:		\Android\data\org.prowl.torque\files\themeDir <br>
 Dashboards folder:	\Android\data\org.prowl.torque\files\dashboards
