@@ -1320,3 +1320,4 @@ CD: Current</td>
 This repo also includes a Torque Pro dashboard setup based on the above list of PIDs that could be easily imported into the app:
 
 <img src="https://user-images.githubusercontent.com/20664969/234874093-794d3863-9821-4b1d-acc3-28474330ab3d.png"></img>
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/20664969/281052459-cedef1de-223e-4e5c-91a6-6adba50289a3.png"></img>
