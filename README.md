@@ -1317,7 +1317,15 @@ CD: Current</td>
   
 <h2> Torque Pro Dashboards </h2>
 
-This repo also includes a Torque Pro dashboard setup based on the above list of PIDs that could be easily imported into the app:
+This repo also includes two Torque Pro dashboard setups based on the above list of PIDs that could be easily imported into the app:
 
+<h4>v1</h4>
 <img src="https://user-images.githubusercontent.com/20664969/234874093-794d3863-9821-4b1d-acc3-28474330ab3d.png"></img>
+
+<h4>v2</h4>
 <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/20664969/281052459-cedef1de-223e-4e5c-91a6-6adba50289a3.png"></img>
+
+Please note that the contents of the theme folder also need to be amended for each dashboard to work.
+
+Theme folder:		\Android\data\org.prowl.torque\files\themeDir
+Dashboards folder:	\Android\data\org.prowl.torque\files\dashboards
