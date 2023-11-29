@@ -102,3 +102,4 @@
 "TPMS_Tyre_Temperature_FR","TPMS_Temp_FR","0x22c00b","K-50",-50,100,"C","7A0","","",1,60000
 "TPMS_Tyre_Temperature_RL","TPMS_Temp_RL","0x22c00b","U-50",-50,100,"C","7A0","","",1,60000
 "TPMS_Tyre_Temperature_RR","TPMS_Temp_RR","0x22c00b","P-50",-50,100,"C","7A0","","",1,60000
+"Brake_Pedal_Switch","Brake_Switch","0x22bc06","LOOKUP(E:0:45=1)",0,1,"","770","","",1,0
