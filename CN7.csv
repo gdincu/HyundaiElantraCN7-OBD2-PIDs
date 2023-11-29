@@ -65,6 +65,13 @@
 "IGMP_RL_Door_Open","Door_RL_Open","0x22bc03","E&1",0,1,"","770","","",1,2000
 "IGMP_RR_Door_Open","Door_RR_Open","0x22bc03","((E&4)>2)",0,1,"","770","","",1,2000
 "IGMP_Trunk_Door_Open","Door_Trunk_Open","0x22bc03","((E&128)>7)",0,1,"","770","","",1,2000
+"IGMP_Brake_Pedal_Switch","Brake_Switch","0x22bc06","LOOKUP(E:0:45=1)",0,1,"","770","","",1,0
+"IGMP_Handbrake_Switch","Handbrake_Switch","0x22bc03","LOOKUP(E:0:64=1)",0,1,"","770","","",1,0
+"IGMP_Turn_Signal_Left","TurnSignal_Left","0x22bc08","LOOKUP(E:0:2=1)",0,1,"","770","","",1,0
+"IGMP_Turn_Signal_Right","TurnSignal_Right","0x22bc08","LOOKUP(E:0:8=1)",0,1,"","770","","",1,0
+"IGMP_Headlights_High_Beam","Headlights_High_Beam","0x22bc09","LOOKUP(G:0:12=1)",0,1,"","770","","",1,0
+"IGMP_Headlights_Low_Beam","Headlights_Low_Beam","0x22bc09","LOOKUP(H:0:12=1)",0,1,"","770","","",1,0
+"IGMP_Headlights_Switch","Headlights_Switch","0x22bc05","LOOKUP(G:0:4=1)",0,1,"","770","","",1,0
 "Injection_OpenDuration_Inj_1","Inj_1_Open","0x22e002","INT16(X:W)*0.8192",0,65535,"mS","","","",1,0
 "Injection_OpenDuration_Inj_2","Inj_2_Open","0x22e002","INT16(Z:Y)*0.8192",0,65535,"mS","","","",1,0
 "Injection_OpenDuration_Inj_3","Inj_3_Open","0x22e002","INT16(AB:AA)*0.8192",0,65535,"mS","","","",1,0
@@ -102,4 +109,3 @@
 "TPMS_Tyre_Temperature_FR","TPMS_Temp_FR","0x22c00b","K-50",-50,100,"C","7A0","","",1,60000
 "TPMS_Tyre_Temperature_RL","TPMS_Temp_RL","0x22c00b","U-50",-50,100,"C","7A0","","",1,60000
 "TPMS_Tyre_Temperature_RR","TPMS_Temp_RR","0x22c00b","P-50",-50,100,"C","7A0","","",1,60000
-"Brake_Pedal_Switch","Brake_Switch","0x22bc06","LOOKUP(E:0:45=1)",0,1,"","770","","",1,0
