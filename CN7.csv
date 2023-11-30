@@ -12,6 +12,7 @@
 "Cluster_Fuel_Level","Fuel_Level","0x22b002","avg(20:E/1.9361703271804)",0,47,"L","7C6","","",1,60000
 "Cluster_Odometer_CalcMethod1","Odometer_M1","0x22b002","Int24(G:H:I)",0,16777215,"km","7C6","","",1,60000
 "Cluster_Odometer_CalcMethod2","Odometer_M2","0x22b002","(H<8)+I",0,16777215,"Km","7C6","","",1,60000
+"Cluster_Voltage","Cluster_Voltage","0x22b002",F*0.078125,0,18,"V","7C6","","",1,60000
 "Custom_Average_Fuel_Consumption_Lifetime","Avg_Consumption_Lifetime","","VAL{OBFCM_Total_Fuel_Consumed_Lifetime}/VAL{Cluster_Odometer_CalcMethod1}*100",0,100,"L/100Km","","","",1,60000
 "Custom_Average_Speed_Excl_Idle_Lifetime","AverageSpeedLifetimeExclIdle","","VAL{Cluster_Odometer_CalcMethod1}/((VAL{OBFCM_Total_Engine_Run_Time_Lifetime}-VAL{OBFCM_Total_Idle_Engine_Run_Time_Lifetime})/3600)",0,200,"Km/h","","","",1,60000
 "Custom_Average_Speed_Incl_Idle_Lifetime","AverageSpeedLifetimeInclIdle","","VAL{Cluster_Odometer_CalcMethod1}/(VAL{OBFCM_Total_Engine_Run_Time_Lifetime}/3600)",0,200,"Km/h","","","",1,60000
@@ -61,6 +62,7 @@
 "IGMP_Belt_Passenger","Belt_Passenger","0x22bc03","((F&4)>2)",0,1,"","770","","",1,2000
 "IGMP_Bonnet","Bonnet","0x22bc03","F&1",0,1,"","770","","",1,2000
 "IGMP_DeFog_Lights","DeFog_Lights","0x22bc07","F",0,1,"","770","","",1,2000
+"IGMP_DeFog_Switch","DeFog_Switch","0x22bc03","LOOKUP(H:0:2=1)",0,1,"","770","","",1,2000
 "IGMP_FL_Door_Lock","Door_FL_Lock","0x22bc04","lookup(((E&8)>3):'U':0='L')",0,1,"","770","","",1,2000
 "IGMP_FL_Door_Open","Door_FL_Open","0x22bc03","((E&32)>5)",0,1,"","770","","",1,2000
 "IGMP_FR_Door_Lock","Door_FR_Lock","0x22bc04","lookup(((E&4)>2):'U':0='L')",0,1,"","770","","",1,2000
