@@ -21,7 +21,7 @@
 "Custom_Gear_Current_v2","CurrentGear_v2","","LOOKUP([0C]/([0D]):0:0.1~26=6:27~34=5:35~44=4:45~59=3:71~86=2:110~160=1)",0,6,"","","","",1,1000
 "Custom_Gear_Ideal","IdealGear","","LOOKUP([0D]:6:0=0:0.1~19.9=1:20~29.9=2:30~39.1=3:39.2~51.2=4:51.3~59.2=5)",0,6,"","","","",1,200
 "Custom_Instant_BSFC","Instant_BSFC","","[9D]/([ff1226]*0.95)",0,1000,"g/HP","","","",1,0
-"Custom_Instant_Fuel_Consumption","Instant_Consumption","","AVG(4:(LOOKUP([0D]:100/[ff1203]:0~5=[5E])))",0,100,"L","","","",1,0
+"Custom_Instant_Fuel_Consumption","Instant_Consumption","","AVG(4:(LOOKUP([0D]:100/[ff1203]:0~5=[5E])))",0,100,"","","","",1,0
 "Custom_Percentage_Of_City_Driving_Lifetime","PctCityDriving","","VAL{OBFCM_Total_City_Propulsion_System_Active_Time_Lifetime}/VAL{OBFCM_Total_Engine_Run_Time_Lifetime}*100",0,100,"%","","","",1,60000
 "Custom_Percentage_Of_Driving_Time_Lifetime","PctDrivingTimeLifetime","","(1-(VAL{OBFCM_Total_Idle_Engine_Run_Time_Lifetime}/VAL{OBFCM_Total_Engine_Run_Time_Lifetime}))*100",0,100,"%","","","",1,60000
 "Custom_Percentage_Of_Highway_Driving_Lifetime","PctHighwayDriving","","(VAL{OBFCM_Total_Engine_Run_Time_Lifetime}-VAL{OBFCM_Total_Idle_Engine_Run_Time_Lifetime}-VAL{OBFCM_Total_City_Propulsion_System_Active_Time_Lifetime})/VAL{OBFCM_Total_Engine_Run_Time_Lifetime}*100",0,100,"%","","","",1,60000
@@ -40,7 +40,7 @@
 "SAE_Engine_Fuel_Rate_l/h","Engine_Fuel_Rate_l/h","0x015E","(256*A+B)/20",0,3212.75,"L/h","","","",1,5000
 "SAE_Fuel_Sys_Status","Fuel_Sys_Status","0x0103","LOOKUP(A:'EngineOff':1='Warmup':2='OK':4='OK':8='NOK':16='NOK')",0,16,"","","","",1,3000
 "SAE_Engine_Load","Engine_Load","0x0104","A/2.55",0,100,"%","","","",1,1000
-"SAE_RPM","Revs","","INT([0C]/100)/10",0,8,"RPM","","","",1,0
+"SAE_RPM","Revs","","INT([0C]/100)/10",0,8,"","","","",1,0
 "SAE_Speed","Speed","","INT([0D])",0,255,"km/h","","","",1,0
 "DriverFeedback_Engine_Overreving","DriverFeedback_Engine_Overreving","","LOOKUP([0C]:0:3000~8000=1)",0,1,"State","","","",1,200
 "DriverFeedback_Harsh_BrakingOrAcceleration","DriverFeedback_Harsh_BrakingOrAcceleration","","LOOKUP(abs([ff1222]-RDLY(1:[ff1222])):1:0~0.7=0)",0,1,"State","","","",1,200
