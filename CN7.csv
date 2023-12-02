@@ -1,4 +1,10 @@
 "Name", "ShortName", "ModeAndPID", "Equation", "Min Value", "Max Value", "Units", "Header", "startDiagnostic", "stopDiagnostic", "scale","minimumRefreshDelayMillis"
+"ABS_Speed","ABS_Speed","0x220104","G",0,220,"Km/h","7D1","","",1,0
+"ABS_Speed_Front_Left","ABS_Speed_FL","0x220104","L",0,220,"Km/h","7D1","","",1,0
+"ABS_Speed_Front_Right","ABS_Speed_FR","0x220104","M",0,220,"Km/h","7D1","","",1,0
+"ABS_Speed_Rear_Left","ABS_Speed_RL","0x220104","O",0,220,"Km/h","7D1","","",1,0
+"ABS_Speed_Rear_Right","ABS_Speed_RR","0x220104","N",0,220,"Km/h","7D1","","",1,0
+"ABS_Traction_Control_Switch","ABS_TC","0x220104","LOOKUP(S:1:64=0:0=1)",0,1,"","7D1","","",1,0
 "BMS_Auxillary_Battery_State_Of_Charge","Batt_SOC","0x22e004","AD",0,100,"%","7E0","","",1,60000
 "BMS_Auxillary_Battery_State_Of_Health","Batt_SOH","0x22e004","AE",0,100,"%","7E0","","",1,60000
 "BMS_Available_Charge_Power","Max_Regen","0x220101","((f<8)+g)/100",0,98,"kW","7D4","","",1,60000
