@@ -1,5 +1,5 @@
 "Name", "ShortName", "ModeAndPID", "Equation", "Min Value", "Max Value", "Units", "Header", "startDiagnostic", "stopDiagnostic", "scale","minimumRefreshDelayMillis"
-"ABS_Brake_Pressure","Brake_Pressure","INT16(AG:AH)/86.7",0,100,"%","7D1","","",1,0
+"ABS_Brake_Pressure","Brake_Pressure","0x220104","INT16(AG:AH)/86.7",0,100,"%","7D1","","",1,0
 "ABS_Speed","ABS_Speed","0x220104","G",0,220,"Km/h","7D1","","",1,0
 "ABS_Speed_Front_Left","ABS_Speed_FL","0x220104","L",0,220,"Km/h","7D1","","",1,0
 "ABS_Speed_Front_Right","ABS_Speed_FR","0x220104","M",0,220,"Km/h","7D1","","",1,0
