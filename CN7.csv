@@ -23,14 +23,18 @@
 "Cluster_Odometer_CalcMethod1","Odometer_M1","0x22b002","Int24(G:H:I)",0,16777215,"km","7C6","","",1,60000
 "Cluster_Odometer_CalcMethod2","Odometer_M2","0x22b002","(H<8)+I",0,16777215,"Km","7C6","","",1,60000
 "Cluster_Voltage","Cluster_Voltage","0x22b002",F*0.078125,0,18,"V","7C6","","",1,60000
+"Custom_Actual_EGR","Actual_EGR","","[2C]*([2D]+1)",0,9999,"","","","",1,0
 "Custom_Average_Fuel_Consumption_Lifetime","Avg_Consumption_Lifetime","","VAL{OBFCM_Total_Fuel_Consumed_Lifetime}/VAL{Cluster_Odometer_CalcMethod1}*100",0,100,"L/100Km","","","",1,60000
 "Custom_Average_Speed_Excl_Idle_Lifetime","AverageSpeedLifetimeExclIdle","","VAL{Cluster_Odometer_CalcMethod1}/((VAL{OBFCM_Total_Engine_Run_Time_Lifetime}-VAL{OBFCM_Total_Idle_Engine_Run_Time_Lifetime})/3600)",0,200,"Km/h","","","",1,60000
 "Custom_Average_Speed_Incl_Idle_Lifetime","AverageSpeedLifetimeInclIdle","","VAL{Cluster_Odometer_CalcMethod1}/(VAL{OBFCM_Total_Engine_Run_Time_Lifetime}/3600)",0,200,"Km/h","","","",1,60000
 "Custom_Coolant_AB","Coolant_AB","","LOOKUP(1::1='VAL{SAE_Coolant_A} VAL{SAE_Coolant_B}')",-40,215,"C","","","",1,5000
 "Custom_Gear_Current","CurrentGear","","LOOKUP([0C]/([0D]):0:0.1~26=6:27~34=5:35~44=4:45~59=3:71~86=2:110~160=1)",0,6,"","","","",1,1000
 "Custom_Gear_Ideal","IdealGear","","LOOKUP([0D]:6:0=0:0.1~19.9=1:20~29.9=2:30~39.1=3:39.2~51.2=4:51.3~59.2=5)",0,6,"","","","",1,200
+"Custom_InMotion","Custom_InMotion","","LOOKUP(INT([0D]):0:4~255=3)",0,255,"km/h","","","",1,0
 "Custom_Instant_BSFC","Instant_BSFC","","[9D]/([ff1226]*0.95)",0,1000,"g/HP","","","",1,0
 "Custom_Instant_Fuel_Consumption","Instant_Consumption","","AVG(4:(LOOKUP([0D]:100/[ff1203]:0~5=[5E])))",0,100,"","","","",1,0
+"Custom_LowTPS","Custom_LowTPS","","LOOKUP([11]:1:16~100=0)",0,1,"","","","",1,0
+"Custom_OL-Drive","Custom_OL-Drive","0x0103","LOOKUP(A:0:4=1)",0,16,"","","","",1,0
 "Custom_Percentage_Of_City_Driving_Lifetime","PctCityDriving","","VAL{OBFCM_Total_City_Propulsion_System_Active_Time_Lifetime}/VAL{OBFCM_Total_Engine_Run_Time_Lifetime}*100",0,100,"%","","","",1,60000
 "Custom_Percentage_Of_Driving_Time_Lifetime","PctDrivingTimeLifetime","","(1-(VAL{OBFCM_Total_Idle_Engine_Run_Time_Lifetime}/VAL{OBFCM_Total_Engine_Run_Time_Lifetime}))*100",0,100,"%","","","",1,60000
 "Custom_Percentage_Of_Highway_Driving_Lifetime","PctHighwayDriving","","(VAL{OBFCM_Total_Engine_Run_Time_Lifetime}-VAL{OBFCM_Total_Idle_Engine_Run_Time_Lifetime}-VAL{OBFCM_Total_City_Propulsion_System_Active_Time_Lifetime})/VAL{OBFCM_Total_Engine_Run_Time_Lifetime}*100",0,100,"%","","","",1,60000
@@ -48,6 +52,8 @@
 "SAE_Fuel_Sys_Status","Fuel_Sys_Status","0x0103","LOOKUP(A:'EngineOff':1='Warmup':2='OK':4='OK':8='NOK':16='NOK')",0,16,"","","","",1,3000
 "SAE_RPM","Revs","","INT([0C]/100)/10",0,8,"","","","",1,0
 "SAE_Speed","Speed","","INT([0D])",0,255,"km/h","","","",1,0
+"DriverFeedback_Coasting","Coasting_Status","","LOOKUP(VAL{Custom_LowTPS}+VAL{Custom_OL-Drive}+VAL{Custom_InMotion}:0:4=1)",0,100,"","","","",1,0
+"DriverFeedback_DFCO","DFCO_Status","","LOOKUP(VAL{Custom_LowTPS}+VAL{Custom_OL-Drive}:0:2=1)",0,1,"","","","",1,0
 "DriverFeedback_Engine_Overreving","DriverFeedback_Engine_Overreving","","LOOKUP([0C]:0:3000~8000=1)",0,1,"State","","","",1,200
 "DriverFeedback_Harsh_BrakingOrAcceleration","DriverFeedback_Harsh_BrakingOrAcceleration","","LOOKUP(abs([ff1222]-RDLY(1:[ff1222])):1:0~0.7=0)",0,1,"State","","","",1,200
 "DriverFeedback_Idling","DriverFeedback_Idling","","LOOKUP(avg(300:[0D]):1:1~250=0)",0,1,"State","","","",1,1000
