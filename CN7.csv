@@ -92,6 +92,7 @@
 "IGMP_Headlights_High_Beam","Headlights_High_Beam","0x22bc09","G/12",0,1,"","770","","",1,0
 "IGMP_Headlights_Low_Beam","Headlights_Low_Beam","0x22bc09","H/12",0,1,"","770","","",1,0
 "IGMP_Headlights_Switch","Headlights_Switch","0x22bc05","G>2",0,1,"","770","","",1,0
+"IGMP_Reverse","Reverse","0x22bc04","LOOKUP(E/15:0:1=1)",0,1,"","770","","",1,0
 "Injection_OpenDuration_Inj_1","Inj_1_Open","0x22e002","INT16(X:W)*0.8192",0,65535,"mS","7E0","","",1,0
 "Injection_OpenDuration_Inj_2","Inj_2_Open","0x22e002","INT16(Z:Y)*0.8192",0,65535,"mS","7E0","","",1,0
 "Injection_OpenDuration_Inj_3","Inj_3_Open","0x22e002","INT16(AB:AA)*0.8192",0,65535,"mS","7E0","","",1,0
