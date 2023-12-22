@@ -44,6 +44,8 @@
 "Custom_TPMS_FR_Stats","TPMS_FR","","LOOKUP(1::1='int(VAL{TPMS_Tyre_Pressure_FL}+0.5) VAL{TPMS_Tyre_Temperature_FL}')",-50,100,"psi °C","","","",1,62000
 "Custom_TPMS_RL_Stats","TPMS_RL","","LOOKUP(1::1='int(VAL{TPMS_Tyre_Pressure_RR}+0.5) VAL{TPMS_Tyre_Temperature_RR}')",-50,100,"psi °C","","","",1,58000
 "Custom_TPMS_RR_Stats","TPMS_RR","","LOOKUP(1::1='int(VAL{TPMS_Tyre_Pressure_RL}+0.5) VAL{TPMS_Tyre_Temperature_RL}')",-50,100,"psi °C","","","",1,56000
+"Custom_Closed_Throttle","Custom_Closed_Throttle","","LOOKUP([4a]:0:0~7.451=1)",0,1,"","","","",1,0
+"Custom_Idle_RPM","Custom_Idle_RPM","","LOOKUP([0C]:0:0~1050=1)",0,1,"","","","",1,0
 "SAE_Ambient_Air_Temp","OutsideTemp","","[46]",-40,215,"C","","","",1,60000
 "SAE_Catalyst_Temp_B1S1","Cat_B1S1_Temp","","[3C]",0,6513.5,"C","","","",1,5000
 "SAE_Control_Module_Voltage","Alternator","","[42]",0,65.535,"V","","","",1,5000
@@ -52,7 +54,7 @@
 "SAE_Fuel_Sys_Status","Fuel_Sys_Status","0x0103","LOOKUP(A:'EngineOff':1='Warmup':2='OK':4='OK':8='NOK':16='NOK')",0,16,"","","","",1,3000
 "SAE_RPM","Revs","","INT([0C]/100)/10",0,8,"","","","",1,0
 "SAE_Speed","Speed","","INT([0D])",0,255,"km/h","","","",1,0
-"DriverFeedback_Coasting","Coasting_Status","","LOOKUP(VAL{Custom_LowTPS}+VAL{Custom_OL-Drive}+VAL{Custom_InMotion}:0:4=1)",0,100,"","","","",1,0
+"DriverFeedback_Coasting","Coasting_Status","","LOOKUP((val{Custom_Closed_Throttle}+VAL{Custom_Idle_RPM}+val{Custom_InMotion}):0:5=1)",0,1,"","","","",1,0
 "DriverFeedback_DFCO","DFCO_Status","","LOOKUP(VAL{Custom_LowTPS}+VAL{Custom_OL-Drive}:0:2=1)",0,1,"","","","",1,0
 "DriverFeedback_Engine_Overreving","DriverFeedback_Engine_Overreving","","LOOKUP([0C]:0:3000~8000=1)",0,1,"State","","","",1,200
 "DriverFeedback_Harsh_BrakingOrAcceleration","DriverFeedback_Harsh_BrakingOrAcceleration","","LOOKUP(abs([ff1222]-RDLY(1:[ff1222])):1:0~0.7=0)",0,1,"State","","","",1,200
