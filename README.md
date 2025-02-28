@@ -1332,7 +1332,7 @@ Dashboards folder:	\Android\data\org.prowl.torque\files\dashboards
 
 <h2> RaceRender3 Gauges </h2>
 
-<img src="https://github.com/user-attachments/assets/53dfd701-374f-41c0-83db-d359438359dd"></img>
+<img src="https://github.com/user-attachments/assets/582ec000-1058-42bc-9e64-b6089bbdc912"></img>
 
 For the speed gauge logged data has to be amended as follows for it to be displayed correctly:
 <ul>
