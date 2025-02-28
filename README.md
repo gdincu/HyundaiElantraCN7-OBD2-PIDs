@@ -1329,3 +1329,7 @@ Please note that the contents of the theme folder also need to be amended for ea
 
 Theme folder:		\Android\data\org.prowl.torque\files\themeDir <br>
 Dashboards folder:	\Android\data\org.prowl.torque\files\dashboards
+
+<h2> RaceRender3 Gauges </h2>
+
+<img src="https://github.com/user-attachments/assets/c0175157-75ac-472e-b4bf-491c9ba5612e"></img>
