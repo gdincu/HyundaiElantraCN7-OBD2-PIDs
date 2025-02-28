@@ -1333,3 +1333,9 @@ Dashboards folder:	\Android\data\org.prowl.torque\files\dashboards
 <h2> RaceRender3 Gauges </h2>
 
 <img src="https://github.com/user-attachments/assets/c0175157-75ac-472e-b4bf-491c9ba5612e"></img>
+
+For the speed gauge logged data has to be amended as follows for it to be displayed correctly:
+<ul>
+<li>Speed < 61 -> Multiply actual speed by a factor of 1.6</li>
+<li>Speed >= 61 -> Lookup the multiply factor via the multiplier_factors_61_to_240.csv file and multiply the actual speed by that (eg. by using a VLOOKUP in Excel)</li>
+</ul>
