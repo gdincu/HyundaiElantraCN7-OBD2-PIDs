@@ -22,6 +22,7 @@
 "Cluster_Fuel_Level","Fuel_Level","0x22b002","TAVG(120:EWMAF(0.01:(E*1.09890109890109890)))",0,100,"%","7C6","","",1,5000
 "Cluster_Odometer_CalcMethod1","Odometer_M1","0x22b002","Int24(G:H:I)",0,16777215,"km","7C6","","",1,60000
 "Cluster_Odometer_CalcMethod2","Odometer_M2","0x22b002","(H<8)+I",0,16777215,"Km","7C6","","",1,60000
+"Cluster_Speed","Cluster_Speed","","LOOKUP([0D]:[0D]+4.5:0~20=[0D]*1.15)",0,255,"","","","",1,0
 "Cluster_Voltage","Cluster_Voltage","0x22b002",F*0.078125,0,18,"V","7C6","","",1,60000
 "Custom_Actual_EGR","Actual_EGR","","[2C]*([2D]+1)",0,9999,"","","","",1,0
 "Custom_Average_Fuel_Consumption_Lifetime","Avg_Consumption_Lifetime","","VAL{OBFCM_Total_Fuel_Consumed_Lifetime}/VAL{Cluster_Odometer_CalcMethod1}*100",0,100,"L/100Km","","","",1,60000
